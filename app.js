@@ -15,7 +15,7 @@ const api = (path) =>
   );
 const stars = (n) => `★ ${n >= 1000 ? `${(n / 1000).toFixed(1)}k` : n}`;
 
-for (const repo of ["ps5upload", "ps5drive"]) {
+for (const repo of ["ps5upload"]) {
   api(`repos/phantomptr/${repo}`)
     .then((r) => {
       document.getElementById(`stars-${repo}`).textContent = stars(r.stargazers_count);
