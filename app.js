@@ -4,9 +4,9 @@
 
 document.getElementById("year").textContent = String(new Date().getFullYear());
 
-// Where PS5Upload's own site lives. Switch to "https://ps5upload.phantomptr.com/" once that
-// domain is connected in the ps5upload repo's Pages settings.
-const PS5UPLOAD_SITE = "https://phantomptr.github.io/ps5upload/";
+// Where PS5Upload's own site lives.
+
+const PS5UPLOAD_SITE = "https://ps5upload.phantomptr.com/";
 document.querySelectorAll('[data-site="ps5upload"]').forEach((a) => (a.href = PS5UPLOAD_SITE));
 
 const api = (path) =>
