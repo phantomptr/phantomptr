@@ -1,0 +1,207 @@
+/* phantomptr.com: one column, the same look as the PS5Upload site (neutral page, cards a
+ * step off it, one blue accent, the system typeface), light and dark from the system. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f5f5f7;
+  --card: #ffffff;
+  --line: rgb(0 0 0 / 0.1);
+  --text: #1d1d1f;
+  --muted: #5f5f66;
+  --accent: #0064d2;
+  --accent-fill: #0071e3;
+  --accent-soft: rgb(0 113 227 / 0.1);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e20;
+    --card: #2a2a2c;
+    --line: rgb(255 255 255 / 0.1);
+    --text: #f5f5f7;
+    --muted: #a1a1a8;
+    --accent: #4da3ff;
+    --accent-fill: #0a72e8;
+    --accent-soft: rgb(10 132 255 / 0.16);
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.25);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans",
+    Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+.muted {
+  color: var(--muted);
+}
+
+.page {
+  width: min(720px, 100% - 32px);
+  margin: 0 auto;
+  padding: 72px 0 40px;
+}
+
+.intro {
+  text-align: center;
+}
+.avatar {
+  display: block;
+  margin: 0 auto 20px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 4px var(--card), 0 10px 30px -10px rgb(0 0 0 / 0.4);
+}
+h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+.tagline {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+.bio {
+  max-width: 560px;
+  margin: 18px auto 0;
+  font-size: 17px;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 550;
+  box-shadow: var(--shadow);
+}
+.links a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.links svg {
+  width: 16px;
+  height: 16px;
+}
+
+h2 {
+  margin: 64px 0 16px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+.card h3 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: -0.015em;
+}
+.card h3 a {
+  color: var(--text);
+}
+.card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+.card .meta {
+  margin-top: 2px;
+  font-size: 14px;
+}
+.dot {
+  margin: 0 6px;
+}
+.featured {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.card-head img {
+  border-radius: 13px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 550;
+  font-size: 15px;
+}
+.btn:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+}
+.btn.primary {
+  background: var(--accent-fill);
+  border-color: transparent;
+  color: #fff;
+}
+.btn.primary:hover {
+  filter: brightness(1.08);
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
