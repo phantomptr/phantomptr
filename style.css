@@ -205,3 +205,109 @@ h2 {
   border-top: 1px solid var(--line);
   font-size: 14px;
 }
+
+/* Fun layer: gradient name, typed tagline, chips, a coffee button that can't be missed. */
+:root {
+  --coffee: #ff5e5b;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --coffee: #ff6b68;
+  }
+}
+
+.avatar {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.avatar:hover {
+  transform: rotate(-8deg) scale(1.06);
+}
+h1 {
+  background: linear-gradient(100deg, var(--text) 0%, var(--accent) 55%, var(--coffee) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.tagline {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 16px;
+  min-height: 1.6em;
+}
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background: var(--accent);
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.bio strong {
+  font-weight: 650;
+  color: var(--text);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.chips li {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 550;
+  transition: transform 0.2s;
+}
+.chips li:hover {
+  transform: translateY(-2px) rotate(-1.5deg);
+}
+
+.coffee {
+  margin-top: 22px;
+  text-align: center;
+}
+.coffee-btn {
+  min-height: 44px;
+  padding: 0 22px;
+  font-size: 16px;
+  font-weight: 650;
+  box-shadow: 0 8px 24px -10px var(--accent-fill);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.coffee-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -10px var(--accent-fill);
+}
+.fine {
+  max-width: 440px;
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.foot code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar,
+  .chips li,
+  .coffee-btn,
+  .cursor {
+    animation: none;
+    transition: none;
+  }
+}
