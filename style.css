@@ -232,6 +232,13 @@ h1 {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 16px;
   min-height: 1.6em;
+  text-wrap: balance;
+}
+@media (max-width: 560px) {
+  /* The longest tagline wraps to two lines on phones; reserve the room so nothing jumps. */
+  .tagline {
+    min-height: 3.2em;
+  }
 }
 .cursor {
   display: inline-block;
