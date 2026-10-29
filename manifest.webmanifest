@@ -1,0 +1,13 @@
+{
+  "name": "PhantomPtr",
+  "short_name": "PhantomPtr",
+  "description": "Full stack engineer, open-source builder, vibe coder. Works until it doesn't.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#1e1e20",
+  "theme_color": "#1e1e20",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

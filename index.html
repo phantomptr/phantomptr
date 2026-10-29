@@ -12,12 +12,30 @@
   <meta property="og:url" content="https://phantomptr.com/" />
   <meta property="og:title" content="PhantomPtr" />
   <meta property="og:description" content="Full stack engineer, open-source builder, vibe coder. Works until it doesn't." />
-  <meta property="og:image" content="https://phantomptr.com/assets/avatar.webp" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://phantomptr.com/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="PhantomPtr. Works until it doesn't." />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@phantomptr" />
+  <meta name="twitter:image" content="https://phantomptr.com/assets/og.png" />
   <meta name="color-scheme" content="light dark" />
   <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "PhantomPtr",
+    "url": "https://phantomptr.com/",
+    "image": "https://phantomptr.com/assets/avatar.webp",
+    "jobTitle": "Full stack software engineer",
+    "description": "Full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI.",
+    "sameAs": ["https://github.com/phantomptr", "https://x.com/phantomptr", "https://discord.gg/fzK3xddtrM"]
+  }
+  </script>
 </head>
 <body>
   <main class="page">
@@ -39,6 +57,10 @@
         <li>🧩 Open source</li>
         <li>🫠 Works until it doesn't</li>
       </ul>
+      <p class="now">
+        <strong>Now:</strong> shipping AVA1 1.0.x and the next PS5Upload release.
+        <span class="muted">Say hi on X or Discord, DMs are open.</span>
+      </p>
       <nav class="links" aria-label="Elsewhere">
         <a href="https://github.com/phantomptr" rel="me">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
@@ -69,8 +91,7 @@
             <h3><a href="https://ps5upload.phantomptr.com/" data-site="ps5upload">PS5Upload</a></h3>
             <p class="meta">
               <span id="ps5upload-version">Desktop · Mobile · Browser</span>
-              <span class="dot">·</span>
-              <span class="stars" id="stars-ps5upload">★ 599</span>
+              <span class="stars" id="stars-ps5upload"></span>
             </p>
           </div>
         </div>
@@ -93,8 +114,7 @@
             <h3><a href="https://github.com/phantomptr/ava1">AVA1</a></h3>
             <p class="meta">
               <span id="ava1-version">Rust · C</span>
-              <span class="dot">·</span>
-              <span class="stars" id="stars-ava1">★ 0</span>
+              <span class="stars" id="stars-ava1"></span>
             </p>
           </div>
         </div>
@@ -112,6 +132,7 @@
         </div>
       </article>
 
+      <p class="activity" id="activity" hidden></p>
     </section>
 
     <footer class="foot">

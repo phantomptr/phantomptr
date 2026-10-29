@@ -151,7 +151,8 @@ h2 {
   margin-top: 2px;
   font-size: 14px;
 }
-.dot {
+.stars:not(:empty)::before {
+  content: "·";
   margin: 0 6px;
 }
 .featured {
@@ -307,6 +308,48 @@ h1 {
   font-size: 13.5px;
 }
 
+.now {
+  max-width: 560px;
+  margin: 18px auto 0;
+  font-size: 15px;
+}
+.now strong {
+  font-weight: 650;
+}
+
+.activity {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+.activity a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+}
+.activity a:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* Konami code: up up down down left right left right B A */
+.party .avatar {
+  animation: spin 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 1;
+}
+.party h1 {
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg) scale(1.06);
+  }
+}
+@keyframes shimmer {
+  to {
+    background-position: 200% 0;
+  }
+}
+
 .foot code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 13px;
@@ -316,7 +359,9 @@ h1 {
   .avatar,
   .chips li,
   .coffee-btn,
-  .cursor {
+  .cursor,
+  .party .avatar,
+  .party h1 {
     animation: none;
     transition: none;
   }

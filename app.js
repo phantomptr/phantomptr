@@ -1,5 +1,5 @@
-// Live star counts and PS5Upload's latest version, read from GitHub when the page loads.
-// The numbers in the HTML stay if GitHub can't be reached.
+// Live star counts, latest versions and recent activity, read from GitHub when the page loads.
+// If GitHub can't be reached the stars stay hidden and the static text in the HTML stays.
 "use strict";
 
 document.getElementById("year").textContent = String(new Date().getFullYear());
@@ -28,6 +28,49 @@ for (const repo of ["ps5upload", "ava1"]) {
     .catch(() => {});
 }
 
+// "Last push: 3 hours ago, to ava1" under the projects.
+const ago = (date) => {
+  const s = Math.max(1, (Date.now() - date.getTime()) / 1000);
+  const units = [["year", 31536000], ["month", 2592000], ["day", 86400], ["hour", 3600], ["minute", 60]];
+  for (const [name, secs] of units) {
+    const n = Math.floor(s / secs);
+    if (n >= 1) return `${n} ${name}${n === 1 ? "" : "s"} ago`;
+  }
+  return "just now";
+};
+api("users/phantomptr/events/public?per_page=30")
+  .then((events) => {
+    const push = events.find((e) => e.type === "PushEvent" && e.public);
+    if (!push) return;
+    const el = document.getElementById("activity");
+    el.replaceChildren("Last push: ", ago(new Date(push.created_at)), ", to ");
+    const a = document.createElement("a");
+    a.href = `https://github.com/${push.repo.name}`;
+    a.textContent = push.repo.name.replace(/^phantomptr\//, "");
+    el.append(a, ".");
+    el.hidden = false;
+  })
+  .catch(() => {});
+
+// Konami code. You know the one.
+{
+  const code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+  let pos = 0;
+  addEventListener("keydown", (e) => {
+    pos = e.key === code[pos] ? pos + 1 : e.key === code[0] ? 1 : 0;
+    if (pos !== code.length) return;
+    pos = 0;
+    document.body.classList.remove("party");
+    void document.body.offsetWidth; // restart the animation
+    document.body.classList.add("party");
+    const t = document.getElementById("tagline");
+    if (t) {
+      t.dataset.locked = "1"; // stops the typing loop below
+      t.textContent = "Cheat code accepted. Infinite tokens unlocked. (Not really.)";
+    }
+  });
+}
+
 // Taglines that type themselves out, one at a time.
 const TAGLINES = [
   "Works until it doesn't.",
@@ -44,13 +87,15 @@ if (taglineEl && !reduceMotion) {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   (async () => {
     await sleep(2800);
-    for (;;) {
+    const locked = () => taglineEl.dataset.locked === "1";
+    while (!locked()) {
       const next = TAGLINES[(i = (i + 1) % TAGLINES.length)];
-      while (taglineEl.textContent.length) {
+      while (taglineEl.textContent.length && !locked()) {
         taglineEl.textContent = taglineEl.textContent.slice(0, -1);
         await sleep(28);
       }
       for (const ch of next) {
+        if (locked()) break;
         taglineEl.textContent += ch;
         await sleep(ch === " " ? 90 : 48);
       }
