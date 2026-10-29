@@ -7,7 +7,11 @@ Full stack software engineer. Currently in my **vibe coding** era: a new journey
 - **[PS5Upload](https://github.com/phantomptr/ps5upload)**: send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser. [Website and downloads](https://ps5upload.phantomptr.com/)
 - **[AVA1](https://github.com/phantomptr/ava1)**: a fast, encrypted, resumable file-transfer protocol, designed for sending files to a PS5. Written spec, test vectors, and matching Rust and C implementations. It carries every transfer in PS5Upload. [crates.io](https://crates.io/crates/ava1) · [docs.rs](https://docs.rs/ava1)
 
-[X](https://x.com/phantomptr) · [Discord](https://discord.gg/fzK3xddtrM)
+### 🤝 Let's connect
+
+Collaborations, contract or full-time work, interesting problems, or questions about the projects: I'd love to hear from you.
+
+[Email](mailto:phantomptr@gmail.com) · [X](https://x.com/phantomptr) · [Discord](https://discord.gg/fzK3xddtrM)
 
 ### ☕ [Coffee or tokens](https://ko-fi.com/B0B81S0WUA)
 

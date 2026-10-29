@@ -28,6 +28,16 @@ for (const repo of ["ps5upload", "ava1"]) {
     .catch(() => {});
 }
 
+// The email address is assembled here so it isn't sitting in the HTML for scrapers.
+{
+  const el = document.getElementById("email");
+  if (el) {
+    const address = `${el.dataset.u}@${el.dataset.d}`;
+    el.href = `mailto:${address}?subject=${encodeURIComponent("Hi from phantomptr.com")}`;
+    el.title = address;
+  }
+}
+
 // "Last push: 3 hours ago, to ava1" under the projects.
 const ago = (date) => {
   const s = Math.max(1, (Date.now() - date.getTime()) / 1000);

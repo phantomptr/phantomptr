@@ -331,6 +331,36 @@ h1 {
   text-decoration-color: var(--accent);
 }
 
+.connect .lead {
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+}
+.open-to {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.open-to li {
+  color: var(--muted);
+  font-size: 15px;
+}
+.open-to strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.fine.left {
+  max-width: none;
+  margin-top: 14px;
+  text-align: left;
+}
+.now a.muted:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 /* Konami code: up up down down left right left right B A */
 .party .avatar {
   animation: spin 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 1;
