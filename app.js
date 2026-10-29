@@ -33,7 +33,7 @@ for (const repo of ["ps5upload", "ava1"]) {
   const el = document.getElementById("email");
   if (el) {
     const address = `${el.dataset.u}@${el.dataset.d}`;
-    el.href = `mailto:${address}?subject=${encodeURIComponent("Hi from phantomptr.com")}`;
+    el.href = `mailto:${address}?subject=${encodeURIComponent("Working together")}`;
     el.title = address;
   }
 }
