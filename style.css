@@ -162,8 +162,20 @@ h2 {
   align-items: center;
   gap: 14px;
 }
-.card-head img {
+.card-head img,
+.card-head .glyph {
+  flex: none;
+  width: 56px;
+  height: 56px;
   border-radius: 13px;
+}
+.card-head .glyph {
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 700;
 }
 .actions {
   display: flex;

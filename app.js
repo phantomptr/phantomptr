@@ -15,19 +15,18 @@ const api = (path) =>
   );
 const stars = (n) => `★ ${n >= 1000 ? `${(n / 1000).toFixed(1)}k` : n}`;
 
-for (const repo of ["ps5upload"]) {
+for (const repo of ["ps5upload", "ava1"]) {
   api(`repos/phantomptr/${repo}`)
     .then((r) => {
       document.getElementById(`stars-${repo}`).textContent = stars(r.stargazers_count);
     })
     .catch(() => {});
+  api(`repos/phantomptr/${repo}/releases?per_page=1`)
+    .then(([latest]) => {
+      if (latest) document.getElementById(`${repo}-version`).textContent = `Latest ${latest.tag_name}`;
+    })
+    .catch(() => {});
 }
-
-api("repos/phantomptr/ps5upload/releases?per_page=1")
-  .then(([latest]) => {
-    if (latest) document.getElementById("ps5upload-version").textContent = `Latest ${latest.tag_name}`;
-  })
-  .catch(() => {});
 
 // Taglines that type themselves out, one at a time.
 const TAGLINES = [
