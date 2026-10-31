@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PhantomPtr</title>
-  <meta name="description" content="PhantomPtr is a full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI." />
+  <meta name="description" data-i18n-attr="content:meta.description" content="PhantomPtr is a full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI." />
   <link rel="canonical" href="https://phantomptr.com/" />
   <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#1e1e20" media="(prefers-color-scheme: dark)" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://phantomptr.com/" />
   <meta property="og:title" content="PhantomPtr" />
-  <meta property="og:description" content="Full stack engineer, open-source builder, vibe coder. Works until it doesn't." />
+  <meta property="og:description" data-i18n-attr="content:meta.og" content="Full stack engineer, open-source builder, vibe coder. Works until it doesn't." />
   <meta property="og:image" content="https://phantomptr.com/assets/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -24,6 +24,60 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="style.css" />
+  <!-- The language, decided before anything is drawn (the same list as app.js): the page waits
+       for its words instead of flashing English, and right-to-left languages lay out that way
+       from the start. Same mechanism as ps5upload.phantomptr.com. -->
+  <script>
+    (function () {
+      var codes = ["en","zh-CN","zh-TW","hi","es","ar","bn","pl","pt-BR","ru","ja","de","fr","ko","tr","vi","id","it","th","hu","fa"];
+      var pick = function (c) {
+        if (!c) return null;
+        c = String(c).toLowerCase();
+        for (var i = 0; i < codes.length; i++) if (codes[i].toLowerCase() === c) return codes[i];
+        if (/^zh-(tw|hk|mo|hant)/.test(c)) return "zh-TW";
+        if (/^zh/.test(c)) return "zh-CN";
+        if (/^pt/.test(c)) return "pt-BR";
+        var p = c.split("-")[0];
+        return codes.indexOf(p) >= 0 ? p : null;
+      };
+      var lang = null;
+      try { lang = pick(new URLSearchParams(location.search).get("lang")) || pick(localStorage.getItem("phantomptr.site.lang")); } catch (e) {}
+      if (!lang) {
+        var nav = navigator.languages || [navigator.language];
+        for (var j = 0; j < nav.length && !lang; j++) lang = pick(nav[j]);
+      }
+      lang = lang || "en";
+      var root = document.documentElement;
+      root.lang = lang;
+      root.dir = lang === "ar" || lang === "fa" ? "rtl" : "ltr";
+      if (lang !== "en") {
+        root.classList.add("i18n-wait");
+        setTimeout(function () { root.classList.remove("i18n-wait"); }, 2500);
+      }
+    })();
+  </script>
+  <link rel="alternate" hreflang="x-default" href="https://phantomptr.com/" />
+  <link rel="alternate" hreflang="en" href="https://phantomptr.com/?lang=en" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://phantomptr.com/?lang=zh-CN" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://phantomptr.com/?lang=zh-TW" />
+  <link rel="alternate" hreflang="hi" href="https://phantomptr.com/?lang=hi" />
+  <link rel="alternate" hreflang="es" href="https://phantomptr.com/?lang=es" />
+  <link rel="alternate" hreflang="ar" href="https://phantomptr.com/?lang=ar" />
+  <link rel="alternate" hreflang="bn" href="https://phantomptr.com/?lang=bn" />
+  <link rel="alternate" hreflang="pl" href="https://phantomptr.com/?lang=pl" />
+  <link rel="alternate" hreflang="pt-BR" href="https://phantomptr.com/?lang=pt-BR" />
+  <link rel="alternate" hreflang="ru" href="https://phantomptr.com/?lang=ru" />
+  <link rel="alternate" hreflang="ja" href="https://phantomptr.com/?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://phantomptr.com/?lang=de" />
+  <link rel="alternate" hreflang="fr" href="https://phantomptr.com/?lang=fr" />
+  <link rel="alternate" hreflang="ko" href="https://phantomptr.com/?lang=ko" />
+  <link rel="alternate" hreflang="tr" href="https://phantomptr.com/?lang=tr" />
+  <link rel="alternate" hreflang="vi" href="https://phantomptr.com/?lang=vi" />
+  <link rel="alternate" hreflang="id" href="https://phantomptr.com/?lang=id" />
+  <link rel="alternate" hreflang="it" href="https://phantomptr.com/?lang=it" />
+  <link rel="alternate" hreflang="th" href="https://phantomptr.com/?lang=th" />
+  <link rel="alternate" hreflang="hu" href="https://phantomptr.com/?lang=hu" />
+  <link rel="alternate" hreflang="fa" href="https://phantomptr.com/?lang=fa" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,26 +96,27 @@
     <header class="intro">
       <img class="avatar" src="assets/avatar.webp" alt="PhantomPtr" width="112" height="112" decoding="async" fetchpriority="high" />
       <h1>PhantomPtr</h1>
-      <p class="tagline"><span id="tagline">Works until it doesn't.</span><span class="cursor" aria-hidden="true"></span></p>
-      <p class="bio">
+      <p class="tagline"><span id="tagline" data-i18n="tagline.0">Works until it doesn't.</span><span class="cursor" aria-hidden="true"></span></p>
+      <p class="bio" data-i18n="bio">
         Hi, I'm a <strong>full stack software engineer</strong> who likes shipping things people
         actually use. Lately I'm deep in my <strong>vibe coding</strong> era: a new journey of building
         with AI in fast cycles of idea, prototype, break, fix, ship, repeat. I take on challenges that
         stretch what I know, turn them into projects, and try to leave behind good software and real
         solutions.
       </p>
-      <ul class="chips" aria-label="Currently">
-        <li>🧑‍💻 Full stack</li>
-        <li>🤖 Vibe coding with AI</li>
-        <li>⚡ Fast build→learn→ship loops</li>
-        <li>🧩 Open source</li>
-        <li>🫠 Works until it doesn't</li>
+      <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Currently">
+        <li data-i18n="chips.stack">🧑‍💻 Full stack</li>
+        <li data-i18n="chips.vibe">🤖 Vibe coding with AI</li>
+        <li data-i18n="chips.loops">⚡ Fast build→learn→ship loops</li>
+        <li data-i18n="chips.oss">🧩 Open source</li>
+        <li data-i18n="chips.works">🫠 Works until it doesn't</li>
       </ul>
       <p class="now">
-        <strong>Now:</strong> shipping AVA1 1.0.x and the next PS5Upload release.
-        <a href="#connect-title" class="muted">Hiring, or want to work together?</a>
+        <strong data-i18n="now.label">Now:</strong>
+        <span data-i18n="now.text">shipping AVA1 1.0.x and the next PS5Upload release.</span>
+        <a href="#connect-title" class="muted" data-i18n="now.link">Hiring, or want to work together?</a>
       </p>
-      <nav class="links" aria-label="Elsewhere">
+      <nav class="links" data-i18n-attr="aria-label:nav.label" aria-label="Elsewhere">
         <a href="https://github.com/phantomptr" rel="me">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
           GitHub
@@ -74,15 +129,19 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1.1a15.8 15.8 0 0 0-5.8 0L8.6 4a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.1 12.1 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8a17 17 0 0 0 5.2-2.6c.4-4.4-.7-8.3-3.1-11.7ZM8.7 14.7c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Zm6.6 0c-1 0-1.9-1-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1Z"/></svg>
           Discord
         </a>
+        <label class="lang" data-i18n-attr="title:nav.language" title="Language">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>
+          <select id="lang" data-i18n-attr="aria-label:nav.language" aria-label="Language"></select>
+        </label>
       </nav>
       <div class="coffee">
-        <a class="btn primary coffee-btn" href="https://ko-fi.com/B0B81S0WUA" title="Everything here is free. A coffee for me, or tokens for the AI that writes the code, keeps it going.">☕ Coffee or tokens</a>
-        <p class="fine">Free and open source. A coffee for me, or tokens for the AI, if it saves you time.</p>
+        <a class="btn primary coffee-btn" href="https://ko-fi.com/B0B81S0WUA" data-i18n="coffee.btn" data-i18n-attr="title:coffee.title" title="Everything here is free. A coffee for me, or tokens for the AI that writes the code, keeps it going.">☕ Coffee or tokens</a>
+        <p class="fine" data-i18n="coffee.fine">Free and open source. A coffee for me, or tokens for the AI, if it saves you time.</p>
       </div>
     </header>
 
     <section aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
+      <h2 id="projects-title" data-i18n="projects.title">Projects</h2>
 
       <article class="card featured">
         <div class="card-head">
@@ -90,20 +149,20 @@
           <div>
             <h3><a href="https://ps5upload.phantomptr.com/" data-site="ps5upload">PS5Upload</a></h3>
             <p class="meta">
-              <span id="ps5upload-version">Desktop · Mobile · Browser</span>
+              <span id="ps5upload-version" data-i18n="ps5upload.meta">Desktop · Mobile · Browser</span>
               <span class="stars" id="stars-ps5upload"></span>
             </p>
           </div>
         </div>
-        <p>
+        <p data-i18n="ps5upload.text">
           Send games, apps and homebrew to a jailbroken PS5, and manage the console from your
           computer, phone or browser. Fast encrypted transfers, package installs, game images,
           save backups and a collection of every game you own. For macOS, Windows, Linux, Android
           and Docker.
         </p>
         <div class="actions">
-          <a class="btn primary" href="https://ps5upload.phantomptr.com/" data-site="ps5upload">Website and downloads</a>
-          <a class="btn" href="https://github.com/phantomptr/ps5upload">Source on GitHub</a>
+          <a class="btn primary" href="https://ps5upload.phantomptr.com/" data-site="ps5upload" data-i18n="ps5upload.site">Website and downloads</a>
+          <a class="btn" href="https://github.com/phantomptr/ps5upload" data-i18n="projects.source">Source on GitHub</a>
         </div>
       </article>
 
@@ -118,7 +177,7 @@
             </p>
           </div>
         </div>
-        <p>
+        <p data-i18n="ava1.text">
           A fast, encrypted, resumable file-transfer protocol, designed for sending files to a
           PS5 and built for any two devices: parallel lanes that adapt to whatever is slowest,
           pick-up-where-it-stopped resume, and every file verified with BLAKE3. A written spec,
@@ -126,7 +185,7 @@
           PS5Upload.
         </p>
         <div class="actions">
-          <a class="btn primary" href="https://github.com/phantomptr/ava1">Source on GitHub</a>
+          <a class="btn primary" href="https://github.com/phantomptr/ava1" data-i18n="projects.source">Source on GitHub</a>
           <a class="btn" href="https://crates.io/crates/ava1">crates.io</a>
           <a class="btn" href="https://docs.rs/ava1">docs.rs</a>
         </div>
@@ -136,24 +195,24 @@
     </section>
 
     <section aria-labelledby="connect-title">
-      <h2 id="connect-title">Work with me</h2>
+      <h2 id="connect-title" data-i18n="connect.title">Work with me</h2>
       <div class="card connect">
-        <p class="lead">
+        <p class="lead" data-i18n="connect.lead">
           Hiring, or need something built? I'm a full stack engineer who ships fast with AI and
           takes ownership from idea to production. Open to:
         </p>
         <ul class="open-to">
-          <li>💼 <strong>Full-time roles</strong> at companies doing work worth doing</li>
-          <li>🚀 <strong>Startups</strong> that need a founding or early engineer who can build the whole thing</li>
-          <li>🛠️ <strong>Contract and consulting</strong>: a prototype, a product, or an AI-assisted dev process for your team</li>
-          <li>🧭 <strong>Advising</strong> on vibe coding, fast build loops, and getting real software out of AI tools</li>
+          <li data-i18n="connect.fulltime">💼 <strong>Full-time roles</strong> at companies doing work worth doing</li>
+          <li data-i18n="connect.startups">🚀 <strong>Startups</strong> that need a founding or early engineer who can build the whole thing</li>
+          <li data-i18n="connect.contract">🛠️ <strong>Contract and consulting</strong>: a prototype, a product, or an AI-assisted dev process for your team</li>
+          <li data-i18n="connect.advising">🧭 <strong>Advising</strong> on vibe coding, fast build loops, and getting real software out of AI tools</li>
         </ul>
         <div class="actions">
-          <a class="btn primary" id="email" href="#connect-title" data-u="phantomptr" data-d="gmail.com">✉️ Email me</a>
-          <a class="btn" href="https://x.com/phantomptr">DM on X</a>
-          <a class="btn" href="https://github.com/phantomptr">My GitHub</a>
+          <a class="btn primary" id="email" href="#connect-title" data-u="phantomptr" data-d="gmail.com" data-i18n="connect.email">✉️ Email me</a>
+          <a class="btn" href="https://x.com/phantomptr" data-i18n="connect.x">DM on X</a>
+          <a class="btn" href="https://github.com/phantomptr" data-i18n="connect.github">My GitHub</a>
         </div>
-        <p class="fine left">
+        <p class="fine left" data-i18n="connect.fine">
           A couple of lines about you and what you need is plenty. I usually reply within a day or
           two.
         </p>
@@ -162,7 +221,7 @@
 
     <footer class="foot">
       <span>© <span id="year">2026</span> PhantomPtr</span>
-      <span class="muted">Built with caffeine, tokens, and a healthy fear of <code>undefined</code>.</span>
+      <span class="muted" data-i18n="foot.built">Built with caffeine, tokens, and a healthy fear of <code>undefined</code>.</span>
     </footer>
   </main>
   <script src="app.js" defer></script>

@@ -3,28 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 · PhantomPtr</title>
+  <title data-i18n="nf.title">404 · PhantomPtr</title>
   <meta name="robots" content="noindex" />
   <meta name="color-scheme" content="light dark" />
   <link rel="icon" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/style.css" />
+  <!-- The language, decided before anything is drawn (the same list as app.js): the page waits
+       for its words instead of flashing English, and right-to-left languages lay out that way
+       from the start. Same mechanism as ps5upload.phantomptr.com. -->
+  <script>
+    (function () {
+      var codes = ["en","zh-CN","zh-TW","hi","es","ar","bn","pl","pt-BR","ru","ja","de","fr","ko","tr","vi","id","it","th","hu","fa"];
+      var pick = function (c) {
+        if (!c) return null;
+        c = String(c).toLowerCase();
+        for (var i = 0; i < codes.length; i++) if (codes[i].toLowerCase() === c) return codes[i];
+        if (/^zh-(tw|hk|mo|hant)/.test(c)) return "zh-TW";
+        if (/^zh/.test(c)) return "zh-CN";
+        if (/^pt/.test(c)) return "pt-BR";
+        var p = c.split("-")[0];
+        return codes.indexOf(p) >= 0 ? p : null;
+      };
+      var lang = null;
+      try { lang = pick(new URLSearchParams(location.search).get("lang")) || pick(localStorage.getItem("phantomptr.site.lang")); } catch (e) {}
+      if (!lang) {
+        var nav = navigator.languages || [navigator.language];
+        for (var j = 0; j < nav.length && !lang; j++) lang = pick(nav[j]);
+      }
+      lang = lang || "en";
+      var root = document.documentElement;
+      root.lang = lang;
+      root.dir = lang === "ar" || lang === "fa" ? "rtl" : "ltr";
+      if (lang !== "en") {
+        root.classList.add("i18n-wait");
+        setTimeout(function () { root.classList.remove("i18n-wait"); }, 2500);
+      }
+    })();
+  </script>
 </head>
 <body>
   <main class="page">
     <header class="intro">
       <img class="avatar" src="/assets/avatar.webp" alt="" width="112" height="112" />
       <h1>404</h1>
-      <p class="tagline">Worked until it didn't.</p>
-      <p class="bio">
+      <p class="tagline" data-i18n="nf.tagline">Worked until it didn't.</p>
+      <p class="bio" data-i18n="nf.text">
         There's nothing at this address. Either I moved it, I never built it, or the AI hallucinated
         the link. All three have happened.
       </p>
       <div class="actions" style="justify-content: center; margin-top: 24px">
-        <a class="btn primary" href="/">Back to the homepage</a>
+        <a class="btn primary" href="/" data-i18n="nf.home">Back to the homepage</a>
         <a class="btn" href="https://github.com/phantomptr">GitHub</a>
       </div>
-      <p class="fine" style="margin-top: 20px">Tried the Konami code on the homepage yet?</p>
+      <p class="fine" style="margin-top: 20px" data-i18n="nf.konami">Tried the Konami code on the homepage yet?</p>
     </header>
   </main>
+  <script src="/app.js" defer></script>
 </body>
 </html>

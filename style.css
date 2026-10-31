@@ -117,6 +117,52 @@ h1 {
   width: 16px;
   height: 16px;
 }
+.lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.lang:hover {
+  border-color: var(--accent);
+}
+.lang svg {
+  position: absolute;
+  inset-inline-start: 11px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+.lang select {
+  appearance: none;
+  height: 100%;
+  max-width: 160px;
+  padding-inline: 33px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+}
+.lang select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+/* Until a translated page has its words (the <head> sets this; at most 2.5 s). */
+.i18n-wait body {
+  visibility: hidden;
+}
+[dir="rtl"] .fine.left {
+  text-align: right;
+}
 
 h2 {
   margin: 64px 0 16px;
