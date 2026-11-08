@@ -39,6 +39,8 @@
   "projects.latest": "Última {tag}",
   "projects.source": "Código en GitHub",
   "projects.title": "Proyectos",
+  "ps5term.meta": "App homebrew para PS5",
+  "ps5term.text": "Una terminal para una PS5 con jailbreak, directamente en la pantalla de la consola: un shell nativo para los archivos de la propia PS5, un shell de Linux real con curl, nano, tmux y htop, y SSH y SFTP desde tu ordenador. Funciona solo con teclado, solo con ratón o solo con mando.",
   "ps5upload.meta": "Escritorio · Móvil · Navegador",
   "ps5upload.site": "Sitio web y descargas",
   "ps5upload.text": "Envía juegos, apps y homebrew a una PS5 con jailbreak y gestiona la consola desde tu ordenador, teléfono o navegador. Transferencias rápidas y cifradas, instalación de paquetes, imágenes de juegos, copias de partidas guardadas y una colección con todos tus juegos. Para macOS, Windows, Linux, Android y Docker.",

@@ -39,6 +39,8 @@
   "projects.latest": "Terbaru {tag}",
   "projects.source": "Sumber di GitHub",
   "projects.title": "Proyek",
+  "ps5term.meta": "Aplikasi homebrew PS5",
+  "ps5term.text": "Terminal untuk PS5 yang di-jailbreak, langsung di layar konsol: shell native untuk file PS5 itu sendiri, shell Linux sungguhan dengan curl, nano, tmux, dan htop, serta SSH dan SFTP dari komputermu. Bisa dipakai hanya dengan keyboard, mouse, atau controller saja.",
   "ps5upload.meta": "Desktop · Ponsel · Browser",
   "ps5upload.site": "Situs web dan unduhan",
   "ps5upload.text": "Kirim game, aplikasi, dan homebrew ke PS5 yang sudah di-jailbreak, dan kelola konsol dari komputer, ponsel, atau browser. Transfer cepat terenkripsi, instalasi paket, image game, cadangan save, dan koleksi semua game yang Anda miliki. Untuk macOS, Windows, Linux, Android, dan Docker.",

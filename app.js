@@ -107,7 +107,7 @@ const api = (path) =>
 const stars = (n) => `★ ${n >= 1000 ? `${(n / 1000).toFixed(1)}k` : n}`;
 
 ready.then(() => {
-for (const repo of ["ps5upload", "ava1"]) {
+for (const repo of ["ps5upload", "ps5term", "ava1"]) {
   api(`repos/phantomptr/${repo}`)
     .then((r) => {
       const el = $(`stars-${repo}`);

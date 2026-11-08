@@ -39,6 +39,8 @@
   "projects.latest": "최신 {tag}",
   "projects.source": "GitHub 소스",
   "projects.title": "프로젝트",
+  "ps5term.meta": "PS5 홈브루 앱",
+  "ps5term.text": "탈옥한 PS5용 터미널로, 콘솔 화면에서 바로 실행됩니다. PS5 자체 파일을 다루는 네이티브 셸, curl·nano·tmux·htop이 있는 진짜 Linux 셸, 그리고 컴퓨터에서 쓰는 SSH와 SFTP를 제공합니다. 키보드만, 마우스만, 컨트롤러만으로도 쓸 수 있습니다.",
   "ps5upload.meta": "데스크톱 · 모바일 · 브라우저",
   "ps5upload.site": "웹사이트와 다운로드",
   "ps5upload.text": "게임, 앱, 홈브루를 탈옥한 PS5로 보내고, 컴퓨터, 휴대폰, 브라우저에서 콘솔을 관리하세요. 빠른 암호화 전송, 패키지 설치, 게임 이미지, 세이브 백업, 그리고 가진 모든 게임의 컬렉션. macOS, Windows, Linux, Android, Docker용.",

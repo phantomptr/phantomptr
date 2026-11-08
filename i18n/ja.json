@@ -39,6 +39,8 @@
   "projects.latest": "最新 {tag}",
   "projects.source": "GitHub のソース",
   "projects.title": "プロジェクト",
+  "ps5term.meta": "PS5 自作アプリ",
+  "ps5term.text": "脱獄済み PS5 のためのターミナル。コンソールの画面上でそのまま動きます。PS5 自身のファイルを扱うネイティブシェル、curl・nano・tmux・htop が使える本物の Linux シェル、そしてパソコンからの SSH と SFTP。キーボードだけ、マウスだけ、コントローラーだけでも操作できます。",
   "ps5upload.meta": "デスクトップ · モバイル · ブラウザ",
   "ps5upload.site": "サイトとダウンロード",
   "ps5upload.text": "ゲーム、アプリ、自作ソフトをジェイルブレイク済みの PS5 に送り、パソコン、スマホ、ブラウザから本体を管理。高速な暗号化転送、パッケージのインストール、ゲームイメージ、セーブのバックアップ、持っているすべてのゲームのコレクション。macOS、Windows、Linux、Android、Docker に対応。",

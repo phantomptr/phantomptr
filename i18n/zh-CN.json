@@ -39,6 +39,8 @@
   "projects.latest": "最新 {tag}",
   "projects.source": "GitHub 源码",
   "projects.title": "项目",
+  "ps5term.meta": "PS5 自制应用",
+  "ps5term.text": "为已越狱的 PS5 打造的终端，直接运行在主机屏幕上：管理 PS5 自身文件的原生 shell，带 curl、nano、tmux 和 htop 的真正 Linux shell，以及从电脑使用的 SSH 和 SFTP。只用键盘、只用鼠标或只用手柄都能操作。",
   "ps5upload.meta": "桌面 · 手机 · 浏览器",
   "ps5upload.site": "官网与下载",
   "ps5upload.text": "把游戏、应用和自制软件发送到已破解的 PS5，并从电脑、手机或浏览器管理主机。快速加密传输、安装包、游戏镜像、存档备份，以及你拥有的全部游戏的收藏库。支持 macOS、Windows、Linux、Android 和 Docker。",

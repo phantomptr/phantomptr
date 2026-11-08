@@ -39,6 +39,8 @@
   "projects.latest": "Mới nhất {tag}",
   "projects.source": "Mã nguồn trên GitHub",
   "projects.title": "Dự án",
+  "ps5term.meta": "Ứng dụng homebrew cho PS5",
+  "ps5term.text": "Một terminal cho PS5 đã jailbreak, chạy ngay trên màn hình máy: shell gốc cho các tệp của chính PS5, shell Linux thật với curl, nano, tmux và htop, cùng SSH và SFTP từ máy tính của bạn. Dùng được chỉ với bàn phím, chỉ với chuột hoặc chỉ với tay cầm.",
   "ps5upload.meta": "Máy tính · Di động · Trình duyệt",
   "ps5upload.site": "Trang web và tải về",
   "ps5upload.text": "Gửi game, ứng dụng và homebrew tới PS5 đã jailbreak, và quản lý máy từ máy tính, điện thoại hoặc trình duyệt. Truyền mã hóa nhanh, cài gói, ảnh game, sao lưu save và bộ sưu tập mọi game bạn có. Cho macOS, Windows, Linux, Android và Docker.",

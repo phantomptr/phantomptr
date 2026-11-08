@@ -39,6 +39,8 @@
   "projects.latest": "En son {tag}",
   "projects.source": "GitHub'da kaynak",
   "projects.title": "Projeler",
+  "ps5term.meta": "PS5 homebrew uygulaması",
+  "ps5term.text": "Jailbreak yapılmış bir PS5 için doğrudan konsolun ekranında çalışan bir terminal: PS5'in kendi dosyaları için yerel bir kabuk, curl, nano, tmux ve htop içeren gerçek bir Linux kabuğu ve bilgisayarından SSH ile SFTP. Yalnızca klavye, yalnızca fare ya da yalnızca kumandayla çalışır.",
   "ps5upload.meta": "Masaüstü · Mobil · Tarayıcı",
   "ps5upload.site": "Web sitesi ve indirmeler",
   "ps5upload.text": "Oyunları, uygulamaları ve homebrew'u jailbreak'li bir PS5'e gönderin ve konsolu bilgisayarınızdan, telefonunuzdan ya da tarayıcınızdan yönetin. Hızlı şifreli aktarımlar, paket kurulumu, oyun imajları, kayıt yedekleri ve sahip olduğunuz her oyunun koleksiyonu. macOS, Windows, Linux, Android ve Docker için.",

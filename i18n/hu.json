@@ -39,6 +39,8 @@
   "projects.latest": "Legújabb {tag}",
   "projects.source": "Forrás a GitHubon",
   "projects.title": "Projektek",
+  "ps5term.meta": "PS5 homebrew alkalmazás",
+  "ps5term.text": "Terminál jailbreakelt PS5-höz, közvetlenül a konzol képernyőjén: natív shell a PS5 saját fájljaihoz, valódi Linux shell curl, nano, tmux és htop programokkal, valamint SSH és SFTP a számítógépedről. Csak billentyűzettel, csak egérrel vagy csak kontrollerrel is működik.",
   "ps5upload.meta": "Asztali · Mobil · Böngésző",
   "ps5upload.site": "Weboldal és letöltések",
   "ps5upload.text": "Küldj játékokat, alkalmazásokat és homebrew-t egy jailbreakelt PS5-re, és kezeld a konzolt a számítógépedről, a telefonodról vagy a böngészőből. Gyors, titkosított átvitelek, csomagtelepítés, játékképfájlok, mentésbiztonsági másolatok és gyűjtemény az összes játékodról. macOS, Windows, Linux, Android és Docker.",

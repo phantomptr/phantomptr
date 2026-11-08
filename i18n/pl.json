@@ -39,6 +39,8 @@
   "projects.latest": "Najnowsze {tag}",
   "projects.source": "Źródła na GitHubie",
   "projects.title": "Projekty",
+  "ps5term.meta": "Aplikacja homebrew na PS5",
+  "ps5term.text": "Terminal dla PS5 z jailbreakiem, prosto na ekranie konsoli: natywna powłoka do plików samej PS5, prawdziwa powłoka Linux z curl, nano, tmux i htop oraz SSH i SFTP z twojego komputera. Działa z samą klawiaturą, samą myszą albo samym kontrolerem.",
   "ps5upload.meta": "Komputer · Telefon · Przeglądarka",
   "ps5upload.site": "Strona i pobieranie",
   "ps5upload.text": "Wysyłaj gry, aplikacje i homebrew na PS5 po jailbreaku i zarządzaj konsolą z komputera, telefonu lub przeglądarki. Szybkie szyfrowane transfery, instalacja pakietów, obrazy gier, kopie zapisów i kolekcja wszystkich twoich gier. Na macOS, Windows, Linux, Android i Docker.",
