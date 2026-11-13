@@ -57,7 +57,7 @@ a:hover {
 .page {
   width: min(720px, 100% - 32px);
   margin: 0 auto;
-  padding: 72px 0 40px;
+  padding: 72px 0 84px; /* room at the end for the terminal button */
 }
 
 .intro {
@@ -439,6 +439,268 @@ h1 {
   .party .avatar,
   .party h1 {
     animation: none;
+    transition: none;
+  }
+}
+
+/* The numbers under the bio: downloads, stars, releases (data/stats.json). */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 7vw, 48px);
+  margin: 26px 0 0;
+}
+.stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  min-width: 0;
+}
+.stats dd {
+  margin: 0;
+  font-size: clamp(26px, 7vw, 34px);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.stats dt {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* A screenshot in a project's card. */
+.shot {
+  display: block;
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.shot:hover img {
+  transform: scale(1.025);
+}
+.card {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card:not(.connect):hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  box-shadow: 0 10px 30px -18px rgb(0 0 0 / 0.35);
+}
+
+/* "cargo add ava1", copied with a click. */
+.snippet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+.snippet:hover {
+  border-color: var(--accent);
+}
+.snippet code,
+.crash,
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.snippet code {
+  font-size: 14px;
+}
+.snippet code::before {
+  content: "$ ";
+  color: var(--muted);
+}
+.snippet-state {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Shipped lately: the newest releases. */
+.log {
+  margin: 0;
+  padding: 6px 22px;
+  list-style: none;
+}
+.log li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 15px;
+}
+.log li + li {
+  border-top: 1px solid var(--line);
+}
+.log a {
+  color: var(--text);
+  font-weight: 550;
+}
+.log time {
+  flex: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+kbd {
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--card);
+  font-size: 12px;
+}
+@media (hover: none) {
+  /* No keyboard to press "/" on: the button in the corner is the way in. */
+  .shell-hint {
+    display: none;
+  }
+}
+.crash {
+  display: inline-block;
+  margin: 18px 0 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #0a1220;
+  color: #9fb3c8;
+  font-size: 13.5px;
+  text-align: start;
+  direction: ltr;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The terminal (shell.js): PS5Term's colors, the same in light and dark. */
+.shell-fab {
+  position: fixed;
+  inset-block-end: 18px;
+  inset-inline-end: 18px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgb(94 234 212 / 0.35);
+  border-radius: 14px;
+  background: #0a1220;
+  color: #5eead4;
+  font: 650 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  cursor: pointer;
+  box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.5);
+  transition: transform 0.2s;
+}
+.shell-fab:hover {
+  transform: translateY(-2px);
+}
+.shell {
+  width: min(680px, 100% - 24px);
+  height: min(460px, 100dvh - 48px);
+  padding: 0;
+  border: 1px solid rgb(94 234 212 / 0.3);
+  border-radius: 14px;
+  background: #0a1220;
+  color: #d6e2ee;
+  font: 14px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  direction: ltr;
+  text-align: left;
+  box-shadow: 0 30px 80px -20px rgb(0 0 0 / 0.7);
+  overflow: hidden;
+}
+.shell[open] {
+  display: flex;
+  flex-direction: column;
+}
+.shell::backdrop {
+  background: rgb(0 0 0 / 0.45);
+  backdrop-filter: blur(3px);
+}
+.shell-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px 6px 14px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  color: #7d92a8;
+  font-size: 12.5px;
+}
+.shell-x {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.shell-x:hover {
+  background: rgb(255 255 255 / 0.08);
+  color: #fff;
+}
+.shell-out {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px 4px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.shell-out div {
+  min-height: 1.55em;
+}
+.shell-out a {
+  color: #5eead4;
+  text-decoration: underline;
+}
+.shell-out .cmd {
+  color: #7d92a8;
+  margin-top: 6px;
+}
+.shell-out .hi {
+  color: #5eead4;
+  font-weight: 650;
+}
+.shell-out .dim {
+  color: #7d92a8;
+}
+.shell-out .err {
+  color: #ff8f8c;
+}
+.shell-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 12px;
+  color: #5eead4;
+}
+.shell-line input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-size: 16px; /* under 16px, iOS zooms the page on focus */
+  caret-color: #5eead4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shot img,
+  .shell-fab,
+  .card {
     transition: none;
   }
 }

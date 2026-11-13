@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PhantomPtr</title>
+  <title>PhantomPtr · PS5Upload, PS5Term, AVA1</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="PhantomPtr is a full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI." />
   <link rel="canonical" href="https://phantomptr.com/" />
   <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#1e1e20" media="(prefers-color-scheme: dark)" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://phantomptr.com/" />
-  <meta property="og:title" content="PhantomPtr" />
+  <meta property="og:site_name" content="PhantomPtr" />
+  <meta property="og:title" content="PhantomPtr · PS5Upload, PS5Term, AVA1" />
   <meta property="og:description" data-i18n-attr="content:meta.og" content="Full stack engineer, open-source builder, vibe coder. Works until it doesn't." />
   <meta property="og:image" content="https://phantomptr.com/assets/og.png" />
   <meta property="og:image:width" content="1200" />
@@ -20,6 +21,9 @@
   <meta name="twitter:site" content="@phantomptr" />
   <meta name="twitter:image" content="https://phantomptr.com/assets/og.png" />
   <meta name="color-scheme" content="light dark" />
+  <link rel="alternate" type="application/atom+xml" title="PS5Upload releases" href="https://github.com/phantomptr/ps5upload/releases.atom" />
+  <link rel="alternate" type="application/atom+xml" title="PS5Term releases" href="https://github.com/phantomptr/ps5term/releases.atom" />
+  <link rel="alternate" type="application/atom+xml" title="AVA1 releases" href="https://github.com/phantomptr/ava1/releases.atom" />
   <link rel="icon" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
@@ -81,13 +85,53 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "PhantomPtr",
-    "url": "https://phantomptr.com/",
-    "image": "https://phantomptr.com/assets/avatar.webp",
-    "jobTitle": "Full stack software engineer",
-    "description": "Full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI.",
-    "sameAs": ["https://github.com/phantomptr", "https://x.com/phantomptr", "https://discord.gg/fzK3xddtrM"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://phantomptr.com/#me",
+        "name": "PhantomPtr",
+        "url": "https://phantomptr.com/",
+        "image": "https://phantomptr.com/assets/avatar.webp",
+        "jobTitle": "Full stack software engineer",
+        "description": "Full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI.",
+        "sameAs": ["https://github.com/phantomptr", "https://x.com/phantomptr", "https://discord.gg/fzK3xddtrM"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://phantomptr.com/#site",
+        "name": "PhantomPtr",
+        "url": "https://phantomptr.com/",
+        "author": { "@id": "https://phantomptr.com/#me" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PS5Upload",
+        "url": "https://ps5upload.phantomptr.com/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS, Windows, Linux, Android",
+        "description": "Send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://phantomptr.com/#me" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "PS5Term",
+        "url": "https://ps5term.phantomptr.com/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "PlayStation 5",
+        "description": "A terminal for a jailbroken PS5: a native shell, a real Linux shell, and SSH and SFTP from your computer.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://phantomptr.com/#me" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "AVA1",
+        "codeRepository": "https://github.com/phantomptr/ava1",
+        "programmingLanguage": ["Rust", "C"],
+        "description": "A fast, encrypted, resumable file-transfer protocol with a written spec, test vectors, and matching Rust and C implementations.",
+        "author": { "@id": "https://phantomptr.com/#me" }
+      }
+    ]
   }
   </script>
 </head>
@@ -104,6 +148,11 @@
         stretch what I know, turn them into projects, and try to leave behind good software and real
         solutions.
       </p>
+      <dl class="stats" id="stats">
+        <div><dt data-i18n="stats.downloads">downloads</dt><dd id="stat-downloads">1M+</dd></div>
+        <div><dt data-i18n="stats.stars">GitHub stars</dt><dd id="stat-stars">1.2k</dd></div>
+        <div><dt data-i18n="stats.releases">releases shipped</dt><dd id="stat-releases">200</dd></div>
+      </dl>
       <ul class="chips" data-i18n-attr="aria-label:chips.label" aria-label="Currently">
         <li data-i18n="chips.stack">🧑‍💻 Full stack</li>
         <li data-i18n="chips.vibe">🤖 Vibe coding with AI</li>
@@ -151,9 +200,16 @@
             <p class="meta">
               <span id="ps5upload-version" data-i18n="ps5upload.meta">Desktop · Mobile · Browser</span>
               <span class="stars" id="stars-ps5upload"></span>
+              <span class="stars" id="downloads-ps5upload"></span>
             </p>
           </div>
         </div>
+        <a class="shot" href="https://ps5upload.phantomptr.com/" data-site="ps5upload" tabindex="-1">
+          <picture>
+            <source srcset="assets/shots/ps5upload-dark.webp" media="(prefers-color-scheme: dark)" />
+            <img src="assets/shots/ps5upload-light.webp" data-i18n-attr="alt:alt.games" alt="Games: a grid of game covers with their sizes and where they are." width="1920" height="1200" loading="lazy" decoding="async" />
+          </picture>
+        </a>
         <p data-i18n="ps5upload.text">
           Send games, apps and homebrew to a jailbroken PS5, and manage the console from your
           computer, phone or browser. Fast encrypted transfers, package installs, game images,
@@ -177,6 +233,9 @@
             </p>
           </div>
         </div>
+        <a class="shot" href="https://ps5term.phantomptr.com/" tabindex="-1">
+          <img src="assets/shots/ps5term.webp" data-i18n-attr="alt:alt.shell" alt="PS5Term on a PS5: a Linux shell running uname, free, curl over HTTPS and df." width="1920" height="1080" loading="lazy" decoding="async" />
+        </a>
         <p data-i18n="ps5term.text">
           A terminal for a jailbroken PS5, right on the console's screen: a native shell for the
           PS5's own files, a real Linux shell with curl, nano, tmux and htop, and SSH and SFTP
@@ -206,6 +265,10 @@
           test vectors, and matching Rust and C implementations. It carries every transfer in
           PS5Upload.
         </p>
+        <button class="snippet" type="button" id="copy-ava1" data-copy="cargo add ava1" data-i18n-attr="title:copy" title="Copy">
+          <code>cargo add ava1</code>
+          <span class="snippet-state" aria-live="polite" data-i18n="copy">Copy</span>
+        </button>
         <div class="actions">
           <a class="btn primary" href="https://github.com/phantomptr/ava1" data-i18n="projects.source">Source on GitHub</a>
           <a class="btn" href="https://crates.io/crates/ava1">crates.io</a>
@@ -214,6 +277,11 @@
       </article>
 
       <p class="activity" id="activity" hidden></p>
+    </section>
+
+    <section aria-labelledby="log-title" id="log" hidden>
+      <h2 id="log-title" data-i18n="log.title">Shipped lately</h2>
+      <ol class="log card" id="log-list"></ol>
     </section>
 
     <section aria-labelledby="connect-title">
@@ -244,6 +312,7 @@
     <footer class="foot">
       <span>© <span id="year">2026</span> PhantomPtr</span>
       <span class="muted" data-i18n="foot.built">Built with caffeine, tokens, and a healthy fear of <code>undefined</code>.</span>
+      <span class="muted shell-hint" data-i18n="shell.hint">Press <kbd>/</kbd> for a terminal.</span>
     </footer>
   </main>
   <script src="app.js" defer></script>

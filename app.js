@@ -104,34 +104,107 @@ const api = (path) =>
   fetch(`https://api.github.com/${path}`, { headers: { Accept: "application/vnd.github+json" } }).then((r) =>
     r.ok ? r.json() : Promise.reject(new Error(String(r.status))),
   );
-const stars = (n) => `★ ${n >= 1000 ? `${(n / 1000).toFixed(1)}k` : n}`;
+/** 1066285 → "1.1M", in the visitor's language. */
+const compact = (n) => new Intl.NumberFormat(lang, { notation: "compact", maximumFractionDigits: 1 }).format(n);
+const stars = (n) => `★ ${compact(n)}`;
+const REPOS = { ps5upload: "PS5Upload", ps5term: "PS5Term", ava1: "AVA1" };
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-ready.then(() => {
-for (const repo of ["ps5upload", "ps5term", "ava1"]) {
-  api(`repos/phantomptr/${repo}`)
-    .then((r) => {
-      const el = $(`stars-${repo}`);
-      if (el) el.textContent = stars(r.stargazers_count);
-    })
-    .catch(() => {});
-  api(`repos/phantomptr/${repo}/releases?per_page=1`)
-    .then(([latest]) => {
-      const el = $(`${repo}-version`);
-      if (latest && el) el.textContent = t("projects.latest", "Latest {tag}", { tag: latest.tag_name });
-    })
-    .catch(() => {});
+/** Counts a figure up to its value once, the first time it is on screen. */
+function countUp(el, value) {
+  if (reduceMotion || !("IntersectionObserver" in window)) return void (el.textContent = compact(value));
+  const io = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) return;
+    io.disconnect();
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / 900);
+      el.textContent = compact(Math.round(value * (1 - (1 - p) ** 3)));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+  io.observe(el);
 }
+
+// Stars, downloads, versions and the latest releases come from data/stats.json, which
+// scripts/stats.mjs rewrites every day (.github/workflows/stats.yml): one same-origin file
+// instead of six GitHub API calls a visit. If the file is missing or more than a week old,
+// the stars and versions are asked from GitHub as before.
+const statsFile = fetch("/data/stats.json")
+  .then((r) => (r.ok ? r.json() : null))
+  .catch(() => null);
+
+function showRepo(repo, { stars: n, latest, downloads }) {
+  const s = $(`stars-${repo}`);
+  if (s && n >= 10) s.textContent = stars(n); // a handful of stars says nothing yet
+  const v = $(`${repo}-version`);
+  if (v && latest) v.textContent = t("projects.latest", "Latest {tag}", { tag: latest });
+  const d = $(`downloads-${repo}`);
+  if (d && downloads >= 1000) d.textContent = `↓ ${compact(downloads)}`;
+}
+
+ready.then(async () => {
+  if (!$("projects-title")) return;
+  const stats = await statsFile;
+  const fresh = stats && Date.now() - Date.parse(stats.generated) < 7 * 86400e3;
+  if (stats) {
+    for (const [repo, r] of Object.entries(stats.repos)) showRepo(repo, r);
+    for (const key of ["downloads", "stars", "releases"]) {
+      const el = $(`stat-${key}`);
+      if (el && stats.totals[key]) countUp(el, stats.totals[key]);
+    }
+    const list = $("log-list");
+    if (list && stats.log.length) {
+      for (const r of stats.log) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = r.url;
+        a.textContent = `${REPOS[r.repo] ?? r.repo} ${r.tag}`;
+        const time = document.createElement("time");
+        time.dateTime = r.at;
+        time.textContent = ago(new Date(r.at));
+        li.append(a, time);
+        list.append(li);
+      }
+      $("log").hidden = false;
+    }
+  }
+  if (fresh) return;
+  for (const repo of Object.keys(REPOS)) {
+    api(`repos/phantomptr/${repo}`)
+      .then((r) => showRepo(repo, { stars: r.stargazers_count }))
+      .catch(() => {});
+    api(`repos/phantomptr/${repo}/releases?per_page=1`)
+      .then(([latest]) => latest && showRepo(repo, { latest: latest.tag_name }))
+      .catch(() => {});
+  }
+});
+
+// "cargo add ava1": one click copies it.
+document.querySelectorAll("[data-copy]").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+    } catch {
+      return; // no clipboard here: the text is on the page to select
+    }
+    const state = btn.querySelector(".snippet-state");
+    state.textContent = t("copied", "Copied");
+    setTimeout(() => (state.textContent = t("copy", "Copy")), 1600);
+  });
 });
 
 // The email address is assembled here so it isn't sitting in the HTML for scrapers.
-{
+// (After the words are in, so the subject line is in the visitor's language too.)
+ready.then(() => {
   const el = $("email");
   if (el) {
     const address = `${el.dataset.u}@${el.dataset.d}`;
     el.href = `mailto:${address}?subject=${encodeURIComponent(t("connect.subject", "Working together"))}`;
     el.title = address;
   }
-}
+});
 
 // "Last push: 3 hours ago, to ava1" under the projects, the time in the visitor's language.
 const ago = (date) => {
@@ -144,33 +217,85 @@ const ago = (date) => {
   }
   return rtf.format(-1, "minute");
 };
+/** The newest public push, asked from GitHub at most once every ten minutes per tab. */
+async function lastPush() {
+  const KEY = "phantomptr.site.push";
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(KEY));
+    if (saved && Date.now() - saved.at < 600e3) return saved.push;
+  } catch {
+    /* no storage: ask */
+  }
+  const events = await api("users/phantomptr/events/public?per_page=30");
+  const e = events.find((x) => x.type === "PushEvent" && x.public);
+  const push = e ? { repo: e.repo.name, when: e.created_at } : null;
+  try {
+    sessionStorage.setItem(KEY, JSON.stringify({ at: Date.now(), push }));
+  } catch {
+    /* fine */
+  }
+  return push;
+}
 ready.then(() => {
-if ($("activity")) {
-  api("users/phantomptr/events/public?per_page=30")
-    .then((events) => {
-      const push = events.find((e) => e.type === "PushEvent" && e.public);
+  const el = $("activity");
+  if (!el) return;
+  lastPush()
+    .then((push) => {
       if (!push) return;
-      const el = $("activity");
       const a = document.createElement("a");
-      a.href = `https://github.com/${push.repo.name}`;
-      a.textContent = push.repo.name.replace(/^phantomptr\//, "");
+      a.href = `https://github.com/${push.repo}`;
+      a.textContent = push.repo.replace(/^phantomptr\//, "");
       // "Last push: {when}, to {repo}." with the repo as a link.
-      const [before, after] = t("activity.push", "Last push: {when}, to {repo}.", { when: ago(new Date(push.created_at)) }).split("{repo}");
+      const [before, after] = t("activity.push", "Last push: {when}, to {repo}.", { when: ago(new Date(push.when)) }).split("{repo}");
       el.replaceChildren(before, a, after ?? "");
       el.hidden = false;
     })
     .catch(() => {});
-}
 });
+
+// The terminal: a button in the corner, or "/" anywhere. Its code (shell.js) loads on first use.
+{
+  const open = async () => {
+    try {
+      (await import("/shell.js")).openShell({ lang, langs: LANGS.map(([c]) => c), stats: await statsFile });
+    } catch {
+      /* offline: no terminal */
+    }
+  };
+  ready.then(() => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "shell-fab";
+    btn.textContent = ">_";
+    btn.title = t("shell.open", "Open the terminal");
+    btn.setAttribute("aria-label", btn.title);
+    btn.addEventListener("click", open);
+    document.body.append(btn);
+  });
+  addEventListener("keydown", (e) => {
+    if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.target.closest?.("input, select, textarea, dialog, [contenteditable]")) return;
+    e.preventDefault();
+    open();
+  });
+}
+
+// 404: the address that was asked for, in the crash line.
+if ($("crash-path")) {
+  let path = location.pathname;
+  try {
+    path = decodeURIComponent(path);
+  } catch {
+    /* a malformed address: shown as it came */
+  }
+  $("crash-path").textContent = path.slice(0, 60);
+}
 
 // Konami code. You know the one.
 {
   const code = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
   let pos = 0;
-  addEventListener("keydown", (e) => {
-    pos = e.key === code[pos] ? pos + 1 : e.key === code[0] ? 1 : 0;
-    if (pos !== code.length) return;
-    pos = 0;
+  const party = () => {
     document.body.classList.remove("party");
     void document.body.offsetWidth; // restart the animation
     document.body.classList.add("party");
@@ -179,7 +304,14 @@ if ($("activity")) {
       el.dataset.locked = "1"; // stops the typing loop below
       el.textContent = t("konami", "Cheat code accepted. Infinite tokens unlocked. (Not really.)");
     }
+  };
+  addEventListener("keydown", (e) => {
+    pos = e.key === code[pos] ? pos + 1 : e.key === code[0] ? 1 : 0;
+    if (pos !== code.length) return;
+    pos = 0;
+    party();
   });
+  addEventListener("phantomptr:party", party); // the terminal's "konami"
 }
 
 // Taglines that type themselves out, one at a time.
@@ -192,7 +324,6 @@ const taglines = () => [
   t("tagline.5", "Vibe coding: 10% typing, 90% 'hmm, interesting'."),
 ];
 const taglineEl = $("tagline");
-const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (taglineEl && !reduceMotion) {
   let i = 0;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

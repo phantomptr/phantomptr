@@ -1,0 +1,28 @@
+# Rewrites data/stats.json (stars, downloads, latest releases) once a day, so the page reads one
+# file of its own instead of every visitor asking the GitHub API.
+name: stats
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: stats
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit if the numbers moved
+        run: |
+          git diff --quiet -- data/stats.json && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Stats: $(date -u +%F)" -- data/stats.json
+          git push

@@ -2,6 +2,8 @@
 
 Works until it doesn't.
 
+[![PS5Upload downloads](https://img.shields.io/github/downloads/phantomptr/ps5upload/total?label=PS5Upload%20downloads&color=0071e3)](https://ps5upload.phantomptr.com/) [![PS5Upload stars](https://img.shields.io/github/stars/phantomptr/ps5upload?label=stars&color=0071e3)](https://github.com/phantomptr/ps5upload) [![Website](https://img.shields.io/badge/phantomptr.com-visit-0071e3)](https://phantomptr.com/)
+
 Full stack software engineer. Currently in my **vibe coding** era: a new journey of building with AI in fast cycles of idea → prototype → break → fix → ship → repeat. I take on challenges that stretch what I know, turn them into projects, and try to leave behind good software and real solutions.
 
 - **[PS5Upload](https://github.com/phantomptr/ps5upload)**: send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser. [Website and downloads](https://ps5upload.phantomptr.com/)
