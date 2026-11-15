@@ -1,7 +1,7 @@
 {
   "activity.push": "Last push: {when}, to {repo}.",
   "alt.games": "Games: a grid of game covers with their sizes and where they are.",
-  "alt.ns2bench": "NS2Bench with the console's System Settings on screen, between on-screen Joy-Con, beside the driving, video and log panels.",
+  "alt.ns2bench": "NS2Bench showing the console's System Settings with on-screen Joy-Con, the Driving and Video panels and logs",
   "alt.shell": "PS5Term on a PS5: a Linux shell running uname, free, curl over HTTPS and df.",
   "ava1.text": "A fast, encrypted, resumable file-transfer protocol, designed for sending files to a PS5 and built for any two devices: parallel lanes that adapt to whatever is slowest, pick-up-where-it-stopped resume, and every file verified with BLAKE3. A written spec, test vectors, and matching Rust and C implementations. It carries every transfer in PS5Upload.",
   "bio": "Hi, I'm a <strong>full stack software engineer</strong> who likes shipping things people actually use. Lately I'm deep in my <strong>vibe coding</strong> era: a new journey of building with AI in fast cycles of idea, prototype, break, fix, ship, repeat. I take on challenges that stretch what I know, turn them into projects, and try to leave behind good software and real solutions.",

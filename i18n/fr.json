@@ -1,7 +1,7 @@
 {
   "activity.push": "Dernier push : {when}, sur {repo}.",
   "alt.games": "Jeux : une grille de jaquettes avec leur taille et leur emplacement.",
-  "alt.ns2bench": "NS2Bench avec les Paramètres de la console à l'écran, entre des Joy-Con à l'écran, à côté des panneaux de pilotage, de vidéo et de journaux.",
+  "alt.ns2bench": "NS2Bench affichant les Paramètres de la console avec les Joy-Con à l'écran, les panneaux Pilotage et Vidéo et les journaux",
   "alt.shell": "PS5Term sur une PS5 : un shell Linux qui lance uname, free, curl en HTTPS et df.",
   "ava1.text": "Un protocole de transfert de fichiers rapide, chiffré et reprenable, conçu pour envoyer des fichiers vers une PS5 et pensé pour deux appareils quelconques : des voies parallèles qui s'adaptent à ce qui est le plus lent, une reprise là où ça s'est arrêté, et chaque fichier vérifié avec BLAKE3. Une spécification écrite, des vecteurs de test et des implémentations Rust et C testées l'une contre l'autre. Il porte chaque transfert de PS5Upload.",
   "bio": "Salut, je suis <strong>ingénieur logiciel full stack</strong> et j'aime livrer des choses que les gens utilisent vraiment. En ce moment, je suis en plein dans mon ère <strong>vibe coding</strong> : un nouveau voyage où je construis avec l'IA en cycles rapides d'idée, prototype, casser, réparer, livrer, recommencer. Je prends des défis qui dépassent ce que je sais, j'en fais des projets, et j'essaie de laisser derrière moi du bon logiciel et de vraies solutions.",
