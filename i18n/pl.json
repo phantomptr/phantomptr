@@ -1,6 +1,7 @@
 {
   "activity.push": "Ostatni push: {when}, do {repo}.",
   "alt.games": "Gry: siatka okładek z rozmiarem każdej gry i miejscem, gdzie się znajduje.",
+  "alt.ns2bench": "NS2Bench z Ustawieniami systemu konsoli na ekranie, między ekranowymi Joy-Conami, obok paneli sterowania, wideo i logów.",
   "alt.shell": "PS5Term na PS5: powłoka Linuksa uruchamia uname, free, curl przez HTTPS i df.",
   "ava1.text": "Szybki, szyfrowany i wznawialny protokół przesyłania plików, zaprojektowany do wysyłania plików na PS5 i działający między dowolnymi dwoma urządzeniami: równoległe pasy dopasowujące się do najwolniejszego ogniwa, wznawianie od miejsca przerwania i każdy plik sprawdzony BLAKE3. Spisana specyfikacja, wektory testowe oraz implementacje w Rust i C testowane nawzajem. Niesie każdy transfer w PS5Upload.",
   "bio": "Cześć, jestem <strong>inżynierem oprogramowania full stack</strong> i lubię wypuszczać rzeczy, których ludzie naprawdę używają. Ostatnio siedzę głęboko w erze <strong>vibe codingu</strong>: nowa podróż, w której buduję z AI w szybkich cyklach: pomysł, prototyp, zepsuć, naprawić, wypuścić, powtórzyć. Podejmuję wyzwania wykraczające poza to, co umiem, zamieniam je w projekty i staram się zostawiać po sobie dobre oprogramowanie i prawdziwe rozwiązania.",
@@ -41,6 +42,7 @@
   "now.label": "Obecnie:",
   "now.link": "Rekrutujesz albo chcesz współpracować?",
   "now.text": "wypuszczam AVA1 1.0.x i następne wydanie PS5Upload.",
+  "ns2bench.text": "Oglądaj, słuchaj i steruj Nintendo Switch 2 z komputera, ręcznie albo przez agentów AI. Obraz i dźwięk na żywo z karty przechwytującej, klawiatura, mysz i gamepad przez małe urządzenie wejściowe USB, serwer MCP i API HTTP dla agentów oraz powtarzalne testy, a konsola pozostaje offline. Dla macOS, Windows i Linuksa.",
   "projects.latest": "Najnowsze {tag}",
   "projects.source": "Źródła na GitHubie",
   "projects.title": "Projekty",

@@ -1,6 +1,7 @@
 {
   "activity.push": "Push terakhir: {when}, ke {repo}.",
   "alt.games": "Gim: kisi sampul gim beserta ukuran dan lokasinya.",
+  "alt.ns2bench": "NS2Bench dengan Pengaturan Sistem konsol di layar, di antara Joy-Con di layar, di samping panel kendali, video, dan log.",
   "alt.shell": "PS5Term di PS5: shell Linux menjalankan uname, free, curl lewat HTTPS, dan df.",
   "ava1.text": "Protokol transfer berkas yang cepat, terenkripsi, dan bisa dilanjutkan, dirancang untuk mengirim berkas ke PS5 dan bekerja di antara dua perangkat apa pun: jalur paralel yang menyesuaikan diri dengan bagian yang paling lambat, melanjutkan dari titik berhenti, dan setiap berkas diverifikasi dengan BLAKE3. Spesifikasi tertulis, vektor uji, serta implementasi Rust dan C yang diuji satu sama lain. Ia membawa setiap transfer di PS5Upload.",
   "bio": "Hai, saya <strong>software engineer full stack</strong> yang suka merilis hal-hal yang benar-benar dipakai orang. Belakangan saya sedang asyik di era <strong>vibe coding</strong>: perjalanan baru membangun bersama AI dalam siklus cepat: ide, prototipe, rusak, perbaiki, rilis, ulangi. Saya mengambil tantangan yang melampaui apa yang saya tahu, mengubahnya jadi proyek, dan berusaha meninggalkan perangkat lunak yang baik dan solusi yang nyata.",
@@ -41,6 +42,7 @@
   "now.label": "Saat ini:",
   "now.link": "Sedang merekrut, atau ingin bekerja sama?",
   "now.text": "merilis AVA1 1.0.x dan rilis PS5Upload berikutnya.",
+  "ns2bench.text": "Lihat, dengar, dan kendalikan Nintendo Switch 2 dari komputer Anda, dengan tangan atau dengan agen AI. Video dan suara langsung dari kartu tangkap, masukan keyboard, mouse, dan gamepad melalui perangkat masukan USB kecil, server MCP dan HTTP API untuk agen, serta pengujian yang dapat diulang, sementara konsol tetap offline. Untuk macOS, Windows, dan Linux.",
   "projects.latest": "Terbaru {tag}",
   "projects.source": "Sumber di GitHub",
   "projects.title": "Proyek",

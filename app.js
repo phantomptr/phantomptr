@@ -107,7 +107,7 @@ const api = (path) =>
 /** 1066285 → "1.1M", in the visitor's language. */
 const compact = (n) => new Intl.NumberFormat(lang, { notation: "compact", maximumFractionDigits: 1 }).format(n);
 const stars = (n) => `★ ${compact(n)}`;
-const REPOS = { ps5upload: "PS5Upload", ps5term: "PS5Term", ava1: "AVA1" };
+const REPOS = { ps5upload: "PS5Upload", ns2bench: "NS2Bench", ps5term: "PS5Term", ava1: "AVA1" };
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /** Counts a figure up to its value once, the first time it is on screen. */

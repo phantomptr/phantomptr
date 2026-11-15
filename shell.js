@@ -3,6 +3,7 @@
 // prints from the page (about.txt, the project texts) is in the visitor's language.
 const PROJECTS = {
   ps5upload: { name: "PS5Upload", url: "https://ps5upload.phantomptr.com/", text: "ps5upload.text" },
+  ns2bench: { name: "NS2Bench", url: "https://ns2bench.phantomptr.com/", text: "ns2bench.text" },
   ps5term: { name: "PS5Term", url: "https://ps5term.phantomptr.com/", text: "ps5term.text" },
   ava1: { name: "AVA1", url: "https://github.com/phantomptr/ava1", text: "ava1.text" },
 };
@@ -50,7 +51,7 @@ const COMMANDS = {
     for (const [cmd, what] of [
       ["whoami", "who runs this place"],
       ["projects", "what I have built"],
-      ["open <project>", "go to ps5upload, ps5term or ava1"],
+      ["open <project>", "ps5upload, ns2bench, ps5term, ava1"],
       ["stats", "stars, downloads, releases"],
       ["ls, cat <file>", "look around"],
       ["contact", "hire me, or say hi"],

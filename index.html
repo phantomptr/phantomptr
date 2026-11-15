@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PhantomPtr · PS5Upload, PS5Term, AVA1</title>
+  <title>PhantomPtr · PS5Upload, NS2Bench, PS5Term, AVA1</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="PhantomPtr is a full stack software engineer who ships open-source tools and is vibe coding through a fast build-learn-ship cycle with AI." />
   <link rel="canonical" href="https://phantomptr.com/" />
   <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
@@ -11,7 +11,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://phantomptr.com/" />
   <meta property="og:site_name" content="PhantomPtr" />
-  <meta property="og:title" content="PhantomPtr · PS5Upload, PS5Term, AVA1" />
+  <meta property="og:title" content="PhantomPtr · PS5Upload, NS2Bench, PS5Term, AVA1" />
   <meta property="og:description" data-i18n-attr="content:meta.og" content="Full stack engineer, open-source builder, vibe coder. Works until it doesn't." />
   <meta property="og:image" content="https://phantomptr.com/assets/og.png" />
   <meta property="og:image:width" content="1200" />
@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://phantomptr.com/assets/og.png" />
   <meta name="color-scheme" content="light dark" />
   <link rel="alternate" type="application/atom+xml" title="PS5Upload releases" href="https://github.com/phantomptr/ps5upload/releases.atom" />
+  <link rel="alternate" type="application/atom+xml" title="NS2Bench releases" href="https://github.com/phantomptr/ns2bench/releases.atom" />
   <link rel="alternate" type="application/atom+xml" title="PS5Term releases" href="https://github.com/phantomptr/ps5term/releases.atom" />
   <link rel="alternate" type="application/atom+xml" title="AVA1 releases" href="https://github.com/phantomptr/ava1/releases.atom" />
   <link rel="icon" href="assets/favicon.png" />
@@ -110,6 +111,16 @@
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS, Windows, Linux, Android",
         "description": "Send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://phantomptr.com/#me" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NS2Bench",
+        "url": "https://ns2bench.phantomptr.com/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Windows, Linux",
+        "description": "See, hear and drive a Nintendo Switch 2 from your computer, by hand or by AI agents. The console stays offline.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "author": { "@id": "https://phantomptr.com/#me" }
       },
@@ -219,6 +230,35 @@
         <div class="actions">
           <a class="btn primary" href="https://ps5upload.phantomptr.com/" data-site="ps5upload" data-i18n="ps5upload.site">Website and downloads</a>
           <a class="btn" href="https://github.com/phantomptr/ps5upload" data-i18n="projects.source">Source on GitHub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <img src="assets/ns2bench.svg" alt="" width="56" height="56" />
+          <div>
+            <h3><a href="https://ns2bench.phantomptr.com/">NS2Bench</a></h3>
+            <p class="meta">
+              <span id="ns2bench-version">macOS · Windows · Linux</span>
+              <span class="stars" id="stars-ns2bench"></span>
+            </p>
+          </div>
+        </div>
+        <a class="shot" href="https://ns2bench.phantomptr.com/" tabindex="-1">
+          <picture>
+            <source srcset="assets/shots/ns2bench-dark.webp" media="(prefers-color-scheme: dark)" />
+            <img src="assets/shots/ns2bench-light.webp" data-i18n-attr="alt:alt.ns2bench" alt="NS2Bench with the console's System Settings on screen, between on-screen Joy-Con, beside the driving, video and log panels." width="1600" height="1000" loading="lazy" decoding="async" />
+          </picture>
+        </a>
+        <p data-i18n="ns2bench.text">
+          See, hear and drive a Nintendo Switch 2 from your computer, by hand or by AI agents.
+          Live video and sound from a capture card, keyboard, mouse and gamepad input through a
+          small USB input device, an MCP server and an HTTP API for agents, and repeatable tests,
+          while the console stays offline. For macOS, Windows and Linux.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="https://ns2bench.phantomptr.com/" data-i18n="ps5upload.site">Website and downloads</a>
+          <a class="btn" href="https://github.com/phantomptr/ns2bench" data-i18n="projects.source">Source on GitHub</a>
         </div>
       </article>
 

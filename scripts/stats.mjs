@@ -7,7 +7,7 @@
 import { writeFileSync } from "node:fs";
 
 const OWNER = "phantomptr";
-const REPOS = ["ps5upload", "ps5term", "ava1"];
+const REPOS = ["ps5upload", "ns2bench", "ps5term", "ava1"];
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 const api = async (path) => {
   const res = await fetch(`https://api.github.com/${path}`, {

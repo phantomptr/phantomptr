@@ -1,6 +1,7 @@
 {
   "activity.push": "Utolsó push: {when}, ide: {repo}.",
   "alt.games": "Játékok: borítók rácsa, mindegyik játék méretével és helyével.",
+  "alt.ns2bench": "NS2Bench a konzol Rendszerbeállításaival a képernyőn, képernyőn megjelenő Joy-Conok között, a vezérlés, a videó és a napló panelje mellett.",
   "alt.shell": "PS5Term egy PS5-ön: egy Linux-shell, amely uname, free, HTTPS-es curl és df parancsokat futtat.",
   "ava1.text": "Gyors, titkosított, folytatható fájlátviteli protokoll, PS5-re való fájlküldéshez tervezve, de bármely két eszköz között működik: párhuzamos sávok, amelyek mindig az éppen leglassabb láncszemhez igazodnak, folytatás ott, ahol megszakadt, és minden fájl BLAKE3-mal ellenőrizve. Írott specifikáció, tesztvektorok, valamint egymás ellen tesztelt Rust és C implementációk. A PS5Upload minden átvitelét ez viszi.",
   "bio": "Szia, <strong>full stack szoftvermérnök</strong> vagyok, és szeretek olyan dolgokat kiadni, amiket az emberek tényleg használnak. Mostanában nyakig benne vagyok a <strong>vibe coding</strong> korszakomban: új utazás, ahol az MI-vel építek gyors ciklusokban: ötlet, prototípus, elromlik, megjavítom, kiadom, újra. Olyan kihívásokat vállalok, amik túlmutatnak azon, amit tudok, projekteket csinálok belőlük, és igyekszem jó szoftvert és valódi megoldásokat hagyni magam után.",
@@ -41,6 +42,7 @@
   "now.label": "Most:",
   "now.link": "Felvennél valakit, vagy dolgoznánk együtt?",
   "now.text": "az AVA1 1.0.x és a következő PS5Upload kiadás szállítása.",
+  "ns2bench.text": "Lásd, halld és irányítsd a Nintendo Switch 2-t a számítógépedről, kézzel vagy MI-ügynökökkel. Élő kép és hang rögzítőkártyáról, billentyűzet-, egér- és gamepad-bevitel egy kis USB beviteli eszközön át, MCP-szerver és HTTP API az ügynököknek, valamint megismételhető tesztek, miközben a konzol offline marad. macOS, Windows és Linux rendszerre.",
   "projects.latest": "Legújabb {tag}",
   "projects.source": "Forrás a GitHubon",
   "projects.title": "Projektek",

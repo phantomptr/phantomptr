@@ -1,6 +1,7 @@
 {
   "activity.push": "最近一次推送：{when}，到 {repo}。",
   "alt.games": "游戏：一格格游戏封面，标出大小和所在位置。",
+  "alt.ns2bench": "NS2Bench：画面中是主机的系统设置，两侧是屏幕上的 Joy-Con，旁边是操控、视频和日志面板。",
   "alt.shell": "PS5 上的 PS5Term：Linux shell 正在运行 uname、free、走 HTTPS 的 curl 和 df。",
   "ava1.text": "一个快速、加密、可断点续传的文件传输协议，为向 PS5 发送文件而设计，也适用于任意两台设备：多条并行通道自适应当前最慢的一环，断开后从停下的地方继续，每个文件都用 BLAKE3 校验。有完整的规范、测试向量，以及相互对照测试的 Rust 和 C 实现。PS5Upload 的每一次传输都由它承载。",
   "bio": "你好，我是一名<strong>全栈软件工程师</strong>，喜欢做人们真正会用的东西。最近我正沉浸在<strong>vibe coding</strong> 时代：和 AI 一起快速迭代的新旅程，想法、原型、出错、修复、上线，循环往复。我接下超出自己所知的挑战，把它们变成项目，努力留下好软件和真正的解决方案。",
@@ -41,6 +42,7 @@
   "now.label": "现在：",
   "now.link": "在招人，或者想一起做点什么？",
   "now.text": "正在发布 AVA1 1.0.x 和 PS5Upload 的下一个版本。",
+  "ns2bench.text": "在电脑上看到、听到并操控 Nintendo Switch 2，可以亲手操作，也可以交给 AI 智能体。通过采集卡获得实时画面和声音，通过一个小型 USB 输入设备发送键盘、鼠标和手柄输入，为智能体提供 MCP 服务器和 HTTP API，还有可重复的测试，而主机始终保持离线。支持 macOS、Windows 和 Linux。",
   "projects.latest": "最新 {tag}",
   "projects.source": "GitHub 源码",
   "projects.title": "项目",

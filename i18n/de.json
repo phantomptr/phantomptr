@@ -1,6 +1,7 @@
 {
   "activity.push": "Letzter Push: {when}, nach {repo}.",
   "alt.games": "Spiele: ein Raster aus Spielcovern mit Größe und Speicherort.",
+  "alt.ns2bench": "NS2Bench mit den Systemeinstellungen der Konsole auf dem Bildschirm, zwischen Joy-Con auf dem Bildschirm, neben den Bereichen für Steuerung, Video und Protokoll.",
   "alt.shell": "PS5Term auf einer PS5: eine Linux-Shell mit uname, free, curl über HTTPS und df.",
   "ava1.text": "Ein schnelles, verschlüsseltes, fortsetzbares Dateiübertragungsprotokoll, entworfen zum Senden von Dateien an eine PS5 und gebaut für zwei beliebige Geräte: parallele Spuren, die sich dem jeweils langsamsten Glied anpassen, Fortsetzen genau dort, wo es aufgehört hat, und jede Datei mit BLAKE3 geprüft. Eine geschriebene Spezifikation, Testvektoren und gegeneinander getestete Rust- und C-Implementierungen. Es trägt jede Übertragung in PS5Upload.",
   "bio": "Hi, ich bin <strong>Full-Stack-Softwareentwickler</strong> und baue gern Dinge, die Leute wirklich benutzen. Zurzeit stecke ich tief in meiner <strong>Vibe-Coding</strong>-Ära: eine neue Reise, bei der ich mit KI in schnellen Zyklen baue: Idee, Prototyp, kaputt, repariert, ausgeliefert, von vorn. Ich nehme Herausforderungen an, die über mein Wissen hinausgehen, mache Projekte daraus und versuche, gute Software und echte Lösungen zu hinterlassen.",
@@ -41,6 +42,7 @@
   "now.label": "Gerade:",
   "now.link": "Du stellst ein oder willst zusammenarbeiten?",
   "now.text": "AVA1 1.0.x und das nächste PS5Upload-Release ausliefern.",
+  "ns2bench.text": "Sieh, höre und steuere eine Nintendo Switch 2 von deinem Computer aus, von Hand oder mit KI-Agenten. Live-Bild und -Ton von einer Capture-Karte, Tastatur-, Maus- und Gamepad-Eingaben über ein kleines USB-Eingabegerät, ein MCP-Server und eine HTTP-API für Agenten sowie wiederholbare Tests, während die Konsole offline bleibt. Für macOS, Windows und Linux.",
   "projects.latest": "Neueste {tag}",
   "projects.source": "Quellcode auf GitHub",
   "projects.title": "Projekte",

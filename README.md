@@ -7,6 +7,7 @@ Works until it doesn't.
 Full stack software engineer. Currently in my **vibe coding** era: a new journey of building with AI in fast cycles of idea → prototype → break → fix → ship → repeat. I take on challenges that stretch what I know, turn them into projects, and try to leave behind good software and real solutions.
 
 - **[PS5Upload](https://github.com/phantomptr/ps5upload)**: send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser. [Website and downloads](https://ps5upload.phantomptr.com/)
+- **[NS2Bench](https://github.com/phantomptr/ns2bench)**: see, hear and drive a Nintendo Switch 2 from your computer, by hand or by AI agents: live video and sound from a capture card, keyboard, mouse and gamepad input, an MCP server and HTTP API, and repeatable tests. The console stays offline. [Website and downloads](https://ns2bench.phantomptr.com/)
 - **[PS5Term](https://github.com/phantomptr/ps5term)**: a terminal for a jailbroken PS5, right on the console's screen: a native shell, a real Linux shell with curl, nano, tmux and htop, and SSH and SFTP from your computer. Keyboard, mouse or controller alone. [Website and downloads](https://ps5term.phantomptr.com/)
 - **[AVA1](https://github.com/phantomptr/ava1)**: a fast, encrypted, resumable file-transfer protocol, designed for sending files to a PS5. Written spec, test vectors, and matching Rust and C implementations. It carries every transfer in PS5Upload. [crates.io](https://crates.io/crates/ava1) · [docs.rs](https://docs.rs/ava1)
 

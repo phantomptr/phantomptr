@@ -1,6 +1,7 @@
 {
   "activity.push": "Último push: {when}, em {repo}.",
   "alt.games": "Jogos: uma grade de capas com o tamanho de cada jogo e onde ele está.",
+  "alt.ns2bench": "NS2Bench com as Configurações do sistema do console na tela, entre Joy-Con na tela, ao lado dos painéis de controle, vídeo e registros.",
   "alt.shell": "PS5Term em um PS5: um shell Linux rodando uname, free, curl via HTTPS e df.",
   "ava1.text": "Um protocolo de transferência de arquivos rápido, criptografado e retomável, criado para enviar arquivos a um PS5 e feito para quaisquer dois dispositivos: faixas paralelas que se adaptam ao que estiver mais lento, retomada de onde parou e cada arquivo verificado com BLAKE3. Especificação escrita, vetores de teste e implementações em Rust e C testadas uma contra a outra. Ele carrega cada transferência do PS5Upload.",
   "bio": "Oi, sou <strong>engenheiro de software full stack</strong> e gosto de lançar coisas que as pessoas realmente usam. Ultimamente estou mergulhado na minha era de <strong>vibe coding</strong>: uma nova jornada construindo com IA em ciclos rápidos de ideia, protótipo, quebrar, consertar, lançar, repetir. Aceito desafios que esticam o que sei, transformo em projetos e tento deixar bom software e soluções de verdade.",
@@ -41,6 +42,7 @@
   "now.label": "Agora:",
   "now.link": "Contratando, ou quer trabalhar junto?",
   "now.text": "lançando o AVA1 1.0.x e a próxima versão do PS5Upload.",
+  "ns2bench.text": "Veja, ouça e controle um Nintendo Switch 2 pelo computador, à mão ou com agentes de IA. Vídeo e som ao vivo de uma placa de captura, entrada de teclado, mouse e controle por um pequeno dispositivo de entrada USB, um servidor MCP e uma API HTTP para agentes, e testes repetíveis, enquanto o console fica offline. Para macOS, Windows e Linux.",
   "projects.latest": "Última {tag}",
   "projects.source": "Código no GitHub",
   "projects.title": "Projetos",
