@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-15T10:30:25.868Z",
+  "generated": "2026-11-15T12:46:56.506Z",
   "totals": {
-    "stars": 1237,
-    "downloads": 1115119,
+    "stars": 1239,
+    "downloads": 1119046,
     "releases": 211
   },
   "repos": {
     "ps5upload": {
-      "stars": 1233,
+      "stars": 1235,
       "forks": 82,
-      "downloads": 1114513,
+      "downloads": 1118437,
       "releases": 197,
       "latest": "v12.4.22"
     },
@@ -23,7 +23,7 @@
     "ps5term": {
       "stars": 3,
       "forks": 0,
-      "downloads": 534,
+      "downloads": 537,
       "releases": 6,
       "latest": "00.001.005"
     },
