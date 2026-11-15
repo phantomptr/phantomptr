@@ -1,7 +1,7 @@
 {
   "activity.push": "Utolsó push: {when}, ide: {repo}.",
-  "alt.games": "Játékok: borítók rácsa, mindegyik játék méretével és helyével.",
   "alt.ns2bench": "NS2Bench a konzol Rendszerbeállításaival a képernyőn, képernyőn megjelenő Joy-Conok között, a vezérlés, a videó és a napló panelje mellett.",
+  "alt.play": "Játék: egy PS5-játék a számítógépen futó PS5Uploadba streamelve, a vezérlősávval.",
   "alt.shell": "PS5Term egy PS5-ön: egy Linux-shell, amely uname, free, HTTPS-es curl és df parancsokat futtat.",
   "ava1.text": "Gyors, titkosított, folytatható fájlátviteli protokoll, PS5-re való fájlküldéshez tervezve, de bármely két eszköz között működik: párhuzamos sávok, amelyek mindig az éppen leglassabb láncszemhez igazodnak, folytatás ott, ahol megszakadt, és minden fájl BLAKE3-mal ellenőrizve. Írott specifikáció, tesztvektorok, valamint egymás ellen tesztelt Rust és C implementációk. A PS5Upload minden átvitelét ez viszi.",
   "bio": "Szia, <strong>full stack szoftvermérnök</strong> vagyok, és szeretek olyan dolgokat kiadni, amiket az emberek tényleg használnak. Mostanában nyakig benne vagyok a <strong>vibe coding</strong> korszakomban: új utazás, ahol az MI-vel építek gyors ciklusokban: ötlet, prototípus, elromlik, megjavítom, kiadom, újra. Olyan kihívásokat vállalok, amik túlmutatnak azon, amit tudok, projekteket csinálok belőlük, és igyekszem jó szoftvert és valódi megoldásokat hagyni magam után.",
@@ -50,7 +50,7 @@
   "ps5term.text": "Terminál jailbreakelt PS5-höz, közvetlenül a konzol képernyőjén: natív shell a PS5 saját fájljaihoz, valódi Linux shell curl, nano, tmux és htop programokkal, valamint SSH és SFTP a számítógépedről. Csak billentyűzettel, csak egérrel vagy csak kontrollerrel is működik.",
   "ps5upload.meta": "Asztali · Mobil · Böngésző",
   "ps5upload.site": "Weboldal és letöltések",
-  "ps5upload.text": "Küldj játékokat, alkalmazásokat és homebrew-t egy jailbreakelt PS5-re, és kezeld a konzolt a számítógépedről, a telefonodról vagy a böngészőből. Gyors, titkosított átvitelek, csomagtelepítés, játékképfájlok, mentésbiztonsági másolatok és gyűjtemény az összes játékodról. macOS, Windows, Linux, Android és Docker.",
+  "ps5upload.text": "A PS5Upload a PS5-öd képét a számítógépedre, telefonodra vagy böngésződbe közvetíti, a barátaid egy linkkel csatlakozhatnak a játékodhoz, és onnan kezelheted a konzolt: játék, telepítés, játékok és mentések mozgatása, mind egy appban. Ingyenes és nyílt forráskódú macOS-re, Windowsra, Linuxra, Androidra, iPhone-ra és Dockerre.",
   "shell.hint": "Nyomd meg a <kbd>/</kbd> billentyűt a terminálhoz.",
   "shell.open": "Terminál megnyitása",
   "stats.downloads": "letöltés",

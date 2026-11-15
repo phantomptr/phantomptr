@@ -1,7 +1,7 @@
 {
   "activity.push": "最近一次推送：{when}，到 {repo}。",
-  "alt.games": "游戏：一格格游戏封面，标出大小和所在位置。",
   "alt.ns2bench": "NS2Bench 显示主机的系统设置，附带屏幕 Joy-Con、操控与视频面板以及日志",
+  "alt.play": "畅玩：PS5 游戏串流到电脑上的 PS5Upload，带控制栏。",
   "alt.shell": "PS5 上的 PS5Term：Linux shell 正在运行 uname、free、走 HTTPS 的 curl 和 df。",
   "ava1.text": "一个快速、加密、可断点续传的文件传输协议，为向 PS5 发送文件而设计，也适用于任意两台设备：多条并行通道自适应当前最慢的一环，断开后从停下的地方继续，每个文件都用 BLAKE3 校验。有完整的规范、测试向量，以及相互对照测试的 Rust 和 C 实现。PS5Upload 的每一次传输都由它承载。",
   "bio": "你好，我是一名<strong>全栈软件工程师</strong>，喜欢做人们真正会用的东西。最近我正沉浸在<strong>vibe coding</strong> 时代：和 AI 一起快速迭代的新旅程，想法、原型、出错、修复、上线，循环往复。我接下超出自己所知的挑战，把它们变成项目，努力留下好软件和真正的解决方案。",
@@ -50,7 +50,7 @@
   "ps5term.text": "为已越狱的 PS5 打造的终端，直接运行在主机屏幕上：管理 PS5 自身文件的原生 shell，带 curl、nano、tmux 和 htop 的真正 Linux shell，以及从电脑使用的 SSH 和 SFTP。只用键盘、只用鼠标或只用手柄都能操作。",
   "ps5upload.meta": "桌面 · 手机 · 浏览器",
   "ps5upload.site": "官网与下载",
-  "ps5upload.text": "把游戏、应用和自制软件发送到已破解的 PS5，并从电脑、手机或浏览器管理主机。快速加密传输、安装包、游戏镜像、存档备份，以及你拥有的全部游戏的收藏库。支持 macOS、Windows、Linux、Android 和 Docker。",
+  "ps5upload.text": "PS5Upload 把你的 PS5 串流到电脑、手机或浏览器，让好友通过链接加入你的游戏，并在那里管理主机：畅玩、安装、移动游戏和存档，一个应用全搞定。免费开源，支持 macOS、Windows、Linux、Android、iPhone 和 Docker。",
   "shell.hint": "按 <kbd>/</kbd> 打开终端。",
   "shell.open": "打开终端",
   "stats.downloads": "次下载",

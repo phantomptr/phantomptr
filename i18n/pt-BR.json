@@ -1,7 +1,7 @@
 {
   "activity.push": "Último push: {when}, em {repo}.",
-  "alt.games": "Jogos: uma grade de capas com o tamanho de cada jogo e onde ele está.",
   "alt.ns2bench": "NS2Bench mostrando as Configurações do Console com os Joy-Con na tela, os painéis de Controle e Vídeo e os logs",
+  "alt.play": "Jogar: um jogo de PS5 transmitido para o PS5Upload em um computador, com a barra de controles.",
   "alt.shell": "PS5Term em um PS5: um shell Linux rodando uname, free, curl via HTTPS e df.",
   "ava1.text": "Um protocolo de transferência de arquivos rápido, criptografado e retomável, criado para enviar arquivos a um PS5 e feito para quaisquer dois dispositivos: faixas paralelas que se adaptam ao que estiver mais lento, retomada de onde parou e cada arquivo verificado com BLAKE3. Especificação escrita, vetores de teste e implementações em Rust e C testadas uma contra a outra. Ele carrega cada transferência do PS5Upload.",
   "bio": "Oi, sou <strong>engenheiro de software full stack</strong> e gosto de lançar coisas que as pessoas realmente usam. Ultimamente estou mergulhado na minha era de <strong>vibe coding</strong>: uma nova jornada construindo com IA em ciclos rápidos de ideia, protótipo, quebrar, consertar, lançar, repetir. Aceito desafios que esticam o que sei, transformo em projetos e tento deixar bom software e soluções de verdade.",
@@ -50,7 +50,7 @@
   "ps5term.text": "Um terminal para um PS5 desbloqueado, direto na tela do console: um shell nativo para os arquivos do próprio PS5, um shell Linux de verdade com curl, nano, tmux e htop, e SSH e SFTP a partir do seu computador. Funciona só com teclado, só com mouse ou só com controle.",
   "ps5upload.meta": "Desktop · Celular · Navegador",
   "ps5upload.site": "Site e downloads",
-  "ps5upload.text": "Envie jogos, apps e homebrew para um PS5 com jailbreak e gerencie o console do computador, do celular ou do navegador. Transferências rápidas e criptografadas, instalação de pacotes, imagens de jogos, backup de saves e uma coleção com todos os jogos que você tem. Para macOS, Windows, Linux, Android e Docker.",
+  "ps5upload.text": "O PS5Upload transmite seu PS5 para o computador, o celular ou o navegador, deixa os amigos entrarem no seu jogo por um link e gerencia o console de lá: jogue, instale, mova jogos e saves, tudo em um só app. Grátis e de código aberto para macOS, Windows, Linux, Android, iPhone e Docker.",
   "shell.hint": "Pressione <kbd>/</kbd> para abrir um terminal.",
   "shell.open": "Abrir o terminal",
   "stats.downloads": "downloads",

@@ -1,7 +1,7 @@
 {
   "activity.push": "Last push: {when}, to {repo}.",
-  "alt.games": "Games: a grid of game covers with their sizes and where they are.",
   "alt.ns2bench": "NS2Bench showing the console's System Settings with on-screen Joy-Con, the Driving and Video panels and logs",
+  "alt.play": "Play: a PS5 game streamed into PS5Upload on a computer, with its controls bar.",
   "alt.shell": "PS5Term on a PS5: a Linux shell running uname, free, curl over HTTPS and df.",
   "ava1.text": "A fast, encrypted, resumable file-transfer protocol, designed for sending files to a PS5 and built for any two devices: parallel lanes that adapt to whatever is slowest, pick-up-where-it-stopped resume, and every file verified with BLAKE3. A written spec, test vectors, and matching Rust and C implementations. It carries every transfer in PS5Upload.",
   "bio": "Hi, I'm a <strong>full stack software engineer</strong> who likes shipping things people actually use. Lately I'm deep in my <strong>vibe coding</strong> era: a new journey of building with AI in fast cycles of idea, prototype, break, fix, ship, repeat. I take on challenges that stretch what I know, turn them into projects, and try to leave behind good software and real solutions.",
@@ -50,7 +50,7 @@
   "ps5term.text": "A terminal for a jailbroken PS5, right on the console's screen: a native shell for the PS5's own files, a real Linux shell with curl, nano, tmux and htop, and SSH and SFTP from your computer. Works with a keyboard, a mouse or a controller alone.",
   "ps5upload.meta": "Desktop · Mobile · Browser",
   "ps5upload.site": "Website and downloads",
-  "ps5upload.text": "Send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser. Fast encrypted transfers, package installs, game images, save backups and a collection of every game you own. For macOS, Windows, Linux, Android and Docker.",
+  "ps5upload.text": "PS5Upload streams your PS5 to your computer, phone or browser, lets friends join your game from a link, and manages the console from there: play, install, move games and saves, all in one app. Free and open source for macOS, Windows, Linux, Android, iPhone and Docker.",
   "shell.hint": "Press <kbd>/</kbd> for a terminal.",
   "shell.open": "Open the terminal",
   "stats.downloads": "downloads",
