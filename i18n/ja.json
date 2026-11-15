@@ -41,7 +41,7 @@
   "nf.title": "404 · PhantomPtr",
   "now.label": "いま：",
   "now.link": "採用中、または一緒に何か作りたい？",
-  "now.text": "AVA1 1.0.x と PS5Upload の次のリリースを出しているところ。",
+  "now.text": "NS2Bench を公開したばかりで、PS5Upload の次のリリースを準備中です。",
   "ns2bench.text": "パソコンから Nintendo Switch 2 を見て、聞いて、操作できます。自分の手でも、AI エージェントでも。キャプチャーカードからのライブ映像と音声、小さな USB 入力デバイス経由のキーボード・マウス・ゲームパッド入力、エージェント向けの MCP サーバーと HTTP API、繰り返し実行できるテスト。その間、本体はオフラインのままです。macOS、Windows、Linux 対応。",
   "projects.latest": "最新 {tag}",
   "projects.source": "GitHub のソース",

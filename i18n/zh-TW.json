@@ -41,7 +41,7 @@
   "nf.title": "404 · PhantomPtr",
   "now.label": "現在：",
   "now.link": "在徵才，或想一起做點什麼？",
-  "now.text": "正在發布 AVA1 1.0.x 和 PS5Upload 的下一個版本。",
+  "now.text": "剛剛發布了 NS2Bench，正在準備 PS5Upload 的下一個版本。",
   "ns2bench.text": "在電腦上看到、聽到並操控 Nintendo Switch 2，可以親手操作，也可以交給 AI 代理。透過擷取卡取得即時畫面和聲音，透過一個小型 USB 輸入裝置傳送鍵盤、滑鼠和手把輸入，為代理提供 MCP 伺服器和 HTTP API，還有可重複的測試，而主機始終保持離線。支援 macOS、Windows 和 Linux。",
   "projects.latest": "最新 {tag}",
   "projects.source": "GitHub 原始碼",

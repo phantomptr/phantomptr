@@ -41,7 +41,7 @@
   "nf.title": "404 · PhantomPtr",
   "now.label": "지금:",
   "now.link": "채용 중이거나 함께 일하고 싶으신가요?",
-  "now.text": "AVA1 1.0.x와 PS5Upload의 다음 릴리스를 내보내는 중.",
+  "now.text": "방금 NS2Bench를 출시했고, PS5Upload의 다음 릴리스를 준비하고 있습니다.",
   "ns2bench.text": "컴퓨터에서 Nintendo Switch 2를 보고, 듣고, 조작하세요. 직접 하거나 AI 에이전트에게 맡길 수 있습니다. 캡처 카드의 실시간 영상과 소리, 작은 USB 입력 장치를 통한 키보드, 마우스, 게임패드 입력, 에이전트를 위한 MCP 서버와 HTTP API, 반복 가능한 테스트를 제공하며, 본체는 오프라인 상태로 유지됩니다. macOS, Windows, Linux 지원.",
   "projects.latest": "최신 {tag}",
   "projects.source": "GitHub 소스",

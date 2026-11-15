@@ -41,7 +41,7 @@
   "nf.title": "404 · PhantomPtr",
   "now.label": "En ce moment :",
   "now.link": "Vous recrutez, ou envie de travailler ensemble ?",
-  "now.text": "je livre AVA1 1.0.x et la prochaine version de PS5Upload.",
+  "now.text": "je viens de lancer NS2Bench et je prépare la prochaine version de PS5Upload.",
   "ns2bench.text": "Voyez, écoutez et pilotez une Nintendo Switch 2 depuis votre ordinateur, à la main ou avec des agents IA. Vidéo et son en direct depuis une carte de capture, clavier, souris et manette via un petit périphérique d'entrée USB, un serveur MCP et une API HTTP pour les agents, et des tests reproductibles, pendant que la console reste hors ligne. Pour macOS, Windows et Linux.",
   "projects.latest": "Dernière {tag}",
   "projects.source": "Code sur GitHub",

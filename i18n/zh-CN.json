@@ -41,7 +41,7 @@
   "nf.title": "404 · PhantomPtr",
   "now.label": "现在：",
   "now.link": "在招人，或者想一起做点什么？",
-  "now.text": "正在发布 AVA1 1.0.x 和 PS5Upload 的下一个版本。",
+  "now.text": "刚刚发布了 NS2Bench，正在准备 PS5Upload 的下一个版本。",
   "ns2bench.text": "在电脑上看到、听到并操控 Nintendo Switch 2，可以亲手操作，也可以交给 AI 智能体。通过采集卡获得实时画面和声音，通过一个小型 USB 输入设备发送键盘、鼠标和手柄输入，为智能体提供 MCP 服务器和 HTTP API，还有可重复的测试，而主机始终保持离线。支持 macOS、Windows 和 Linux。",
   "projects.latest": "最新 {tag}",
   "projects.source": "GitHub 源码",
