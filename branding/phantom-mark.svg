@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 90 272 360">
+  <!-- The ghost alone, on a transparent background. -->
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5eb0ff"/><stop offset="0.55" stop-color="#8a7dff"/><stop offset="1" stop-color="#ff6b68"/></linearGradient></defs>
+  <path d="M136 250 C136 160 190 104 256 104 C322 104 376 160 376 250 L376 410 Q356 440 336 410 Q316 380 296 410 Q276 440 256 410 Q236 380 216 410 Q196 440 176 410 Q156 380 136 410 Z" fill="url(#g)"/><g fill="none" stroke="#0b1120" stroke-width="13" stroke-linecap="round"><path d="M212 228 V276 M191 240 L233 264 M191 264 L233 240"/><path d="M300 228 V276 M279 240 L321 264 M279 264 L321 240"/></g>
+</svg>
