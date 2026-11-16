@@ -12,6 +12,7 @@ const LINKS = {
   x: "https://x.com/phantomptr",
   discord: "https://discord.gg/fzK3xddtrM",
   coffee: "https://ko-fi.com/B0B81S0WUA",
+  undefinedlab: "https://discord.gg/fzK3xddtrM",
 };
 const mail = ["phantomptr", "gmail.com"].join("@");
 const pageText = (selector, fallback) => document.querySelector(selector)?.textContent.replace(/\s+/g, " ").trim() || fallback;
@@ -105,6 +106,7 @@ const COMMANDS = {
     link("x      ", LINKS.x);
     link("github ", LINKS.github);
     link("discord", LINKS.discord);
+    print("         UndefinedLab: help, releases and chat for every project", "dim");
   },
   coffee() {
     print("Everything here is free. Coffee for me, or tokens for the AI:");

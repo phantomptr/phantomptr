@@ -15,7 +15,7 @@ Full stack software engineer. Currently in my **vibe coding** era: a new journey
 
 Hiring, or need something built? Open to full-time roles, founding or early engineer at a startup, contract and consulting, and advising on AI-assisted development.
 
-[Email](mailto:phantomptr@gmail.com) · [X](https://x.com/phantomptr) · [Discord](https://discord.gg/fzK3xddtrM)
+[Email](mailto:phantomptr@gmail.com) · [X](https://x.com/phantomptr) · [Discord: UndefinedLab](https://discord.gg/fzK3xddtrM)
 
 ### ☕ [Coffee or tokens](https://ko-fi.com/B0B81S0WUA)
 
