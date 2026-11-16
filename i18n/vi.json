@@ -1,6 +1,6 @@
 {
   "activity.push": "Lần đẩy gần nhất: {when}, lên {repo}.",
-  "alt.ns2bench": "NS2Bench với Cài đặt hệ thống của máy trên màn hình, giữa hai Joy-Con trên màn hình, bên cạnh các bảng điều khiển, video và nhật ký.",
+  "alt.ns2bench": "NS2Bench hiển thị menu HOME của máy, Joy-Con trên màn hình, bảng điều khiển, video và nhật ký.",
   "alt.play": "Chơi: một game PS5 được stream vào PS5Upload trên máy tính, kèm thanh điều khiển.",
   "alt.shell": "PS5Term trên PS5: một shell Linux chạy uname, free, curl qua HTTPS và df.",
   "ava1.text": "Một giao thức truyền tệp nhanh, mã hóa và có thể tiếp tục, được thiết kế để gửi tệp tới PS5 và dùng được giữa hai thiết bị bất kỳ: các làn song song tự điều chỉnh theo phần chậm nhất, tiếp tục từ chỗ dừng, và mọi tệp đều được kiểm tra bằng BLAKE3. Có đặc tả, vector kiểm thử, cùng bản cài đặt Rust và C được kiểm tra chéo nhau. Nó đảm nhận mọi lượt truyền trong PS5Upload.",

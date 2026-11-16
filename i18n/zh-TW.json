@@ -1,6 +1,6 @@
 {
   "activity.push": "最近一次推送：{when}，到 {repo}。",
-  "alt.ns2bench": "NS2Bench 顯示主機的系統設定，附帶螢幕上的 Joy-Con、操控與影像面板以及記錄",
+  "alt.ns2bench": "NS2Bench 顯示主機的 HOME 選單，附帶螢幕上的 Joy-Con、操控與影像面板以及記錄",
   "alt.play": "暢玩：PS5 遊戲串流到電腦上的 PS5Upload，附控制列。",
   "alt.shell": "PS5 上的 PS5Term：Linux shell 正在執行 uname、free、走 HTTPS 的 curl 和 df。",
   "ava1.text": "一個快速、加密、可續傳的檔案傳輸協定，為傳送檔案到 PS5 而設計，也適用於任意兩台裝置：多條平行通道自動適應當下最慢的一環，斷線後從停下的地方繼續，每個檔案都以 BLAKE3 驗證。附有完整規格、測試向量，以及彼此對照測試的 Rust 與 C 實作。PS5Upload 的每一次傳輸都由它承載。",

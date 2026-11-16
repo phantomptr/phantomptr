@@ -1,6 +1,6 @@
 {
   "activity.push": "Push terakhir: {when}, ke {repo}.",
-  "alt.ns2bench": "NS2Bench dengan Pengaturan Sistem konsol di layar, di antara Joy-Con di layar, di samping panel kendali, video, dan log.",
+  "alt.ns2bench": "NS2Bench menampilkan menu HOME konsol dengan Joy-Con di layar, panel kendali dan video, serta log.",
   "alt.play": "Main: gim PS5 di-stream ke PS5Upload di komputer, lengkap dengan bilah kontrolnya.",
   "alt.shell": "PS5Term di PS5: shell Linux menjalankan uname, free, curl lewat HTTPS, dan df.",
   "ava1.text": "Protokol transfer berkas yang cepat, terenkripsi, dan bisa dilanjutkan, dirancang untuk mengirim berkas ke PS5 dan bekerja di antara dua perangkat apa pun: jalur paralel yang menyesuaikan diri dengan bagian yang paling lambat, melanjutkan dari titik berhenti, dan setiap berkas diverifikasi dengan BLAKE3. Spesifikasi tertulis, vektor uji, serta implementasi Rust dan C yang diuji satu sama lain. Ia membawa setiap transfer di PS5Upload.",

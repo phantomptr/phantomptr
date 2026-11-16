@@ -1,6 +1,6 @@
 {
   "activity.push": "Utolsó push: {when}, ide: {repo}.",
-  "alt.ns2bench": "NS2Bench a konzol Rendszerbeállításaival a képernyőn, képernyőn megjelenő Joy-Conok között, a vezérlés, a videó és a napló panelje mellett.",
+  "alt.ns2bench": "NS2Bench a konzol HOME menüjével, képernyőn megjelenő Joy-Conokkal, a vezérlés és a videó paneljével és a naplóval.",
   "alt.play": "Játék: egy PS5-játék a számítógépen futó PS5Uploadba streamelve, a vezérlősávval.",
   "alt.shell": "PS5Term egy PS5-ön: egy Linux-shell, amely uname, free, HTTPS-es curl és df parancsokat futtat.",
   "ava1.text": "Gyors, titkosított, folytatható fájlátviteli protokoll, PS5-re való fájlküldéshez tervezve, de bármely két eszköz között működik: párhuzamos sávok, amelyek mindig az éppen leglassabb láncszemhez igazodnak, folytatás ott, ahol megszakadt, és minden fájl BLAKE3-mal ellenőrizve. Írott specifikáció, tesztvektorok, valamint egymás ellen tesztelt Rust és C implementációk. A PS5Upload minden átvitelét ez viszi.",

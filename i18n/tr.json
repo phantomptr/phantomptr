@@ -1,6 +1,6 @@
 {
   "activity.push": "Son push: {when}, {repo} deposuna.",
-  "alt.ns2bench": "NS2Bench: ekranda konsolun Sistem Ayarları, iki yanında ekran Joy-Con'ları, yanında sürüş, video ve günlük panelleri.",
+  "alt.ns2bench": "NS2Bench: konsolun HOME menüsü, ekran Joy-Con'ları, sürüş ve video panelleri ve günlükler.",
   "alt.play": "Oyna: bilgisayarda PS5Upload içine aktarılan bir PS5 oyunu ve kontrol çubuğu.",
   "alt.shell": "Bir PS5'te PS5Term: uname, free, HTTPS üzerinden curl ve df çalıştıran bir Linux kabuğu.",
   "ava1.text": "Hızlı, şifreli ve kaldığı yerden devam edebilen bir dosya aktarım protokolü. PS5'e dosya göndermek için tasarlandı, herhangi iki cihaz arasında çalışır: o an en yavaş olana uyum sağlayan paralel şeritler, kesildiği yerden devam, her dosyanın BLAKE3 ile doğrulanması. Yazılı bir belirtim, test vektörleri ve birbirine karşı test edilen Rust ve C uygulamaları. PS5Upload'daki her aktarımı o taşır.",

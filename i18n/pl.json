@@ -1,6 +1,6 @@
 {
   "activity.push": "Ostatni push: {when}, do {repo}.",
-  "alt.ns2bench": "NS2Bench z Ustawieniami systemu konsoli na ekranie, między ekranowymi Joy-Conami, obok paneli sterowania, wideo i logów.",
+  "alt.ns2bench": "NS2Bench z menu HOME konsoli, ekranowymi Joy-Conami, panelami sterowania i wideo oraz logami.",
   "alt.play": "Graj: gra z PS5 przesyłana strumieniowo do PS5Upload na komputerze, z paskiem sterowania.",
   "alt.shell": "PS5Term na PS5: powłoka Linuksa uruchamia uname, free, curl przez HTTPS i df.",
   "ava1.text": "Szybki, szyfrowany i wznawialny protokół przesyłania plików, zaprojektowany do wysyłania plików na PS5 i działający między dowolnymi dwoma urządzeniami: równoległe pasy dopasowujące się do najwolniejszego ogniwa, wznawianie od miejsca przerwania i każdy plik sprawdzony BLAKE3. Spisana specyfikacja, wektory testowe oraz implementacje w Rust i C testowane nawzajem. Niesie każdy transfer w PS5Upload.",

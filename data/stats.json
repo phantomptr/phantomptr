@@ -1,29 +1,29 @@
 {
-  "generated": "2026-11-15T17:46:51.055Z",
+  "generated": "2026-11-16T02:30:49.287Z",
   "totals": {
-    "stars": 1254,
-    "downloads": 1126699,
-    "releases": 212
+    "stars": 1260,
+    "downloads": 1136509,
+    "releases": 221
   },
   "repos": {
     "ps5upload": {
-      "stars": 1250,
+      "stars": 1254,
       "forks": 82,
-      "downloads": 1126053,
-      "releases": 197,
-      "latest": "v12.4.22"
+      "downloads": 1135569,
+      "releases": 198,
+      "latest": "v12.4.23"
     },
     "ns2bench": {
-      "stars": 0,
+      "stars": 2,
       "forks": 0,
-      "downloads": 80,
-      "releases": 3,
-      "latest": "v0.0.3"
+      "downloads": 360,
+      "releases": 11,
+      "latest": "v0.0.11"
     },
     "ps5term": {
       "stars": 3,
       "forks": 0,
-      "downloads": 545,
+      "downloads": 559,
       "releases": 6,
       "latest": "00.001.005"
     },
@@ -38,27 +38,27 @@
   "log": [
     {
       "repo": "ns2bench",
-      "tag": "v0.0.3",
-      "at": "2026-11-15T14:53:56Z",
-      "url": "https://github.com/phantomptr/ns2bench/releases/tag/v0.0.3"
+      "tag": "v0.0.11",
+      "at": "2026-11-16T02:08:43Z",
+      "url": "https://github.com/phantomptr/ns2bench/releases/tag/v0.0.11"
+    },
+    {
+      "repo": "ns2bench",
+      "tag": "v0.0.10",
+      "at": "2026-11-16T01:50:15Z",
+      "url": "https://github.com/phantomptr/ns2bench/releases/tag/v0.0.10"
+    },
+    {
+      "repo": "ps5upload",
+      "tag": "v12.4.23",
+      "at": "2026-11-15T19:09:50Z",
+      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.4.23"
     },
     {
       "repo": "ps5upload",
       "tag": "v12.4.22",
       "at": "2026-11-15T10:21:02Z",
       "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.4.22"
-    },
-    {
-      "repo": "ns2bench",
-      "tag": "v0.0.2",
-      "at": "2026-11-15T10:06:46Z",
-      "url": "https://github.com/phantomptr/ns2bench/releases/tag/v0.0.2"
-    },
-    {
-      "repo": "ps5upload",
-      "tag": "v12.4.21",
-      "at": "2026-11-15T06:46:40Z",
-      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.4.21"
     },
     {
       "repo": "ps5term",

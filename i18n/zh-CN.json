@@ -1,6 +1,6 @@
 {
   "activity.push": "最近一次推送：{when}，到 {repo}。",
-  "alt.ns2bench": "NS2Bench 显示主机的系统设置，附带屏幕 Joy-Con、操控与视频面板以及日志",
+  "alt.ns2bench": "NS2Bench 显示主机的 HOME 菜单，附带屏幕 Joy-Con、操控与视频面板以及日志",
   "alt.play": "畅玩：PS5 游戏串流到电脑上的 PS5Upload，带控制栏。",
   "alt.shell": "PS5 上的 PS5Term：Linux shell 正在运行 uname、free、走 HTTPS 的 curl 和 df。",
   "ava1.text": "一个快速、加密、可断点续传的文件传输协议，为向 PS5 发送文件而设计，也适用于任意两台设备：多条并行通道自适应当前最慢的一环，断开后从停下的地方继续，每个文件都用 BLAKE3 校验。有完整的规范、测试向量，以及相互对照测试的 Rust 和 C 实现。PS5Upload 的每一次传输都由它承载。",

@@ -1,6 +1,6 @@
 {
   "activity.push": "Dernier push : {when}, sur {repo}.",
-  "alt.ns2bench": "NS2Bench affichant les Paramètres de la console avec les Joy-Con à l'écran, les panneaux Pilotage et Vidéo et les journaux",
+  "alt.ns2bench": "NS2Bench affichant le menu HOME de la console avec les Joy-Con à l'écran, les panneaux Pilotage et Vidéo et les journaux",
   "alt.play": "Jouer : un jeu PS5 diffusé dans PS5Upload sur un ordinateur, avec sa barre de commandes.",
   "alt.shell": "PS5Term sur une PS5 : un shell Linux qui lance uname, free, curl en HTTPS et df.",
   "ava1.text": "Un protocole de transfert de fichiers rapide, chiffré et reprenable, conçu pour envoyer des fichiers vers une PS5 et pensé pour deux appareils quelconques : des voies parallèles qui s'adaptent à ce qui est le plus lent, une reprise là où ça s'est arrêté, et chaque fichier vérifié avec BLAKE3. Une spécification écrite, des vecteurs de test et des implémentations Rust et C testées l'une contre l'autre. Il porte chaque transfert de PS5Upload.",
