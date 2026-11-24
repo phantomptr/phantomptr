@@ -1,29 +1,29 @@
 {
-  "generated": "2026-11-23T16:02:40.144Z",
+  "generated": "2026-11-24T15:56:21.594Z",
   "totals": {
-    "stars": 1352,
-    "downloads": 1314242,
-    "releases": 272
+    "stars": 1363,
+    "downloads": 1334555,
+    "releases": 273
   },
   "repos": {
     "ps5upload": {
-      "stars": 1341,
-      "forks": 92,
-      "downloads": 1312279,
-      "releases": 224,
-      "latest": "v12.6.25"
+      "stars": 1352,
+      "forks": 93,
+      "downloads": 1332548,
+      "releases": 225,
+      "latest": "v12.6.26"
     },
     "ns2bench": {
       "stars": 7,
       "forks": 0,
-      "downloads": 1160,
+      "downloads": 1171,
       "releases": 34,
       "latest": "v0.0.35"
     },
     "ps5term": {
       "stars": 3,
       "forks": 1,
-      "downloads": 778,
+      "downloads": 811,
       "releases": 6,
       "latest": "00.001.005"
     },
@@ -38,15 +38,15 @@
   "log": [
     {
       "repo": "ps5upload",
-      "tag": "v12.6.25",
-      "at": "2026-11-23T13:59:46Z",
-      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.25"
+      "tag": "v12.6.26",
+      "at": "2026-11-24T05:14:52Z",
+      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.26"
     },
     {
       "repo": "ps5upload",
-      "tag": "v12.6.24",
-      "at": "2026-11-23T08:02:29Z",
-      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.24"
+      "tag": "v12.6.25",
+      "at": "2026-11-23T13:59:46Z",
+      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.25"
     },
     {
       "repo": "ava1",
