@@ -1,52 +1,58 @@
 {
-  "generated": "2026-11-26T15:22:15.549Z",
+  "generated": "2026-11-27T15:10:18.693Z",
   "totals": {
-    "stars": 1405,
-    "downloads": 1405214,
-    "releases": 279
+    "stars": 1448,
+    "downloads": 1466947,
+    "releases": 290
   },
   "repos": {
     "ps5upload": {
-      "stars": 1394,
-      "forks": 92,
-      "downloads": 1403137,
-      "releases": 231,
-      "latest": "v12.6.32"
+      "stars": 1437,
+      "forks": 93,
+      "downloads": 1464822,
+      "releases": 241,
+      "latest": "v12.6.42"
     },
     "ns2bench": {
       "stars": 7,
       "forks": 0,
-      "downloads": 1192,
+      "downloads": 1201,
       "releases": 34,
       "latest": "v0.0.35"
     },
     "ps5term": {
       "stars": 3,
       "forks": 1,
-      "downloads": 860,
+      "downloads": 894,
       "releases": 6,
       "latest": "00.001.005"
     },
     "ava1": {
       "stars": 1,
       "forks": 0,
-      "downloads": 25,
-      "releases": 8,
-      "latest": "v1.0.12"
+      "downloads": 30,
+      "releases": 9,
+      "latest": "v1.0.13"
     }
   },
   "log": [
     {
       "repo": "ps5upload",
-      "tag": "v12.6.32",
-      "at": "2026-11-26T13:55:23Z",
-      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.32"
+      "tag": "v12.6.42",
+      "at": "2026-11-27T14:04:49Z",
+      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.42"
     },
     {
       "repo": "ps5upload",
-      "tag": "v12.6.31",
-      "at": "2026-11-26T04:37:05Z",
-      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.31"
+      "tag": "v12.6.41",
+      "at": "2026-11-27T12:40:28Z",
+      "url": "https://github.com/phantomptr/ps5upload/releases/tag/v12.6.41"
+    },
+    {
+      "repo": "ava1",
+      "tag": "v1.0.13",
+      "at": "2026-11-26T16:53:05Z",
+      "url": "https://github.com/phantomptr/ava1/releases/tag/v1.0.13"
     },
     {
       "repo": "ava1",
@@ -65,12 +71,6 @@
       "tag": "v0.0.34",
       "at": "2026-11-20T17:43:22Z",
       "url": "https://github.com/phantomptr/ns2bench/releases/tag/v0.0.34"
-    },
-    {
-      "repo": "ava1",
-      "tag": "v1.0.11",
-      "at": "2026-11-19T19:59:09Z",
-      "url": "https://github.com/phantomptr/ava1/releases/tag/v1.0.11"
     }
   ]
 }
